@@ -22,10 +22,15 @@ void nameFunction (char name[]) {
 printf("%s\n", name);
 };
 
+void nameAgeFunction (char name[], int age) {
+    printf("Hello %s. You are %d years old.\n", name, age);
+}
+
 int main()
 {
-    printf("Hello ");
-    nameFunction("Morgan");
+    printf("Hello World!\n");
+    //nameFunction("Morgan");
+    nameAgeFunction("Morgan",28);
 
     myFunction();
 
