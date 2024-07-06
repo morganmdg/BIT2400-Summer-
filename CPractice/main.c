@@ -25,6 +25,10 @@ void nameAgeFunction (char name[], int age) {
     printf("Hello %s. You are %d years old.\n", name, age);
 }
 
+int myReturnFunction (int x) {
+    return x + 5;
+}
+
 int main()
 {
     printf("Hello World!\n");
@@ -35,6 +39,8 @@ int main()
 
     //update
     calculateSum(124, 23);
+
+    printf("Result is %d\n", myReturnFunction(3));
 
     return 0;
 }
