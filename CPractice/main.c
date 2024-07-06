@@ -46,7 +46,15 @@ int main()
 
     printf("Result is %d\n", myReturnFunction(3));
 
-    printf("The total is %d\n", secondReturnFunction(5,8));
+
+    int result1 = secondReturnFunction(5,8);
+    int result2 = secondReturnFunction(12, 4);
+    int result3 = secondReturnFunction(1,4);
+
+    printf("The first result is %d\n", result1);
+    printf("The second result is %d\n", result2);
+    printf("The third result is %d", result3);
+
 
     return 0;
 }
