@@ -59,17 +59,28 @@ int main()
 
     for(b=0;b < 1; b++) {
         printf("%s\n", carName);
+        break;
     }
 
-    //User input
+    //User number input
     int myNum;
 
     //Prompt user to input number
     printf("Enter a number: \n");
-    scanf("%d \n", &myNum);
+    scanf("%d", &myNum);
 
     //Print the numner user input
     printf("The number you entered was %d \n", myNum);
+
+    //User name input
+    char myName[30];
+
+    //Prompt user to enter name
+    printf("Enter your name: \n");
+    scanf("%s", myName);
+
+    //Print user name
+    printf("Your name is %s \n", myName);
 
     printf("Thank you! The End.\n");
     return 0;
