@@ -54,6 +54,12 @@ int main()
         printf("%d\n", myNumbers[a]);
     }
 
+    char carName[] = {"Volvo"};
+        int b;
+
+    for(b=0;b < 1; b++) {
+        printf("%s\n", carName);
+    }
     printf("Thank you! The End.\n");
     return 0;
 }
