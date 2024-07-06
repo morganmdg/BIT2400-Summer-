@@ -60,6 +60,17 @@ int main()
     for(b=0;b < 1; b++) {
         printf("%s\n", carName);
     }
+
+    //User input
+    int myNum;
+
+    //Prompt user to input number
+    printf("Enter a number: \n");
+    scanf("%d \n", &myNum);
+
+    //Print the numner user input
+    printf("The number you entered was %d \n", myNum);
+
     printf("Thank you! The End.\n");
     return 0;
 }
