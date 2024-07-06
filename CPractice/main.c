@@ -11,11 +11,10 @@ void myFunction () {
     mySecondFunction();
 }
 
-void calculateSum() {
-    int x = 5;
-    int y = 17;
+//Update CalculateSum function
+void calculateSum(int x, int y) {
     int sum = x + y;
-    printf("If x is 5 and y is 17, the sum of x + y = %d \n", sum);
+    printf("The sum %d + %d = %d\n", x, y, sum);
 }
 
 void nameFunction (char name[]) {
@@ -34,7 +33,8 @@ int main()
 
     myFunction();
 
-    calculateSum();
+    //update
+    calculateSum(124, 23);
 
     return 0;
 }
