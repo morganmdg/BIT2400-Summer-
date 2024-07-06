@@ -29,6 +29,10 @@ int myReturnFunction (int x) {
     return x + 5;
 }
 
+int secondReturnFunction(int x, int y) {
+    return x + y;
+}
+
 int main()
 {
     printf("Hello World!\n");
@@ -41,6 +45,8 @@ int main()
     calculateSum(124, 23);
 
     printf("Result is %d\n", myReturnFunction(3));
+
+    printf("The total is %d\n", secondReturnFunction(5,8));
 
     return 0;
 }
