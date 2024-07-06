@@ -3,58 +3,34 @@
 //Function practice
 //https://www.w3schools.com/c/c_functions.php
 
-void mySecondFunction () {
-    printf("Second test for my function\n");
-}
-void myFunction () {
-    printf("First test for my function\n");
-    mySecondFunction();
-}
-
-//Update CalculateSum function
 void calculateSum(int x, int y) {
     int sum = x + y;
     printf("The sum %d + %d = %d\n", x, y, sum);
 }
 
-void nameFunction (char name[]) {
-printf("%s\n", name);
-};
-
 void nameAgeFunction (char name[], int age) {
     printf("Hello %s. You are %d years old.\n", name, age);
 }
 
-int myReturnFunction (int x) {
-    return x + 5;
-}
-
-int secondReturnFunction(int x, int y) {
+int returnFunction(int x, int y) {
     return x + y;
 }
 
 int main()
 {
-    printf("Hello World!\n");
-    //nameFunction("Morgan");
     nameAgeFunction("Morgan",28);
 
-    myFunction();
-
-    //update
     calculateSum(124, 23);
 
-    printf("Result is %d\n", myReturnFunction(3));
+    int result1 = returnFunction(5,8);
+    int result2 = returnFunction(12, 4);
+    int result3 = returnFunction(1,4);
+
+    printf("If x is 5 and y is 8, the first result is %d\n", result1);
+    printf("If x is 12 and y is 4, the second result is %d\n", result2);
+    printf("If x is 1 and y is 4, the third result is %d\n", result3);
 
 
-    int result1 = secondReturnFunction(5,8);
-    int result2 = secondReturnFunction(12, 4);
-    int result3 = secondReturnFunction(1,4);
-
-    printf("The first result is %d\n", result1);
-    printf("The second result is %d\n", result2);
-    printf("The third result is %d", result3);
-
-
+    printf("Thank you! The End.\n");
     return 0;
 }
