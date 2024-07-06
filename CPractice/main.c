@@ -30,6 +30,29 @@ int main()
     printf("If x is 12 and y is 4, the second result is %d\n", result2);
     printf("If x is 1 and y is 4, the third result is %d\n", result3);
 
+    //if else statement practice
+
+    int doorCode = 1337;
+    if(doorCode == 1337) {
+        printf("Correct code. Welcome home.\n");
+    }
+    else {
+        printf("Incorrect code. Intruder.\n");
+    }
+
+    int i;
+
+    for (i=0; i<7; i++) {
+        printf("%d\n",i);
+    };
+
+
+    int myNumbers[] = {12,35,3,26,13};
+    int a;
+
+    for(a=0; a < 5; a++) {
+        printf("%d\n", myNumbers[a]);
+    }
 
     printf("Thank you! The End.\n");
     return 0;
