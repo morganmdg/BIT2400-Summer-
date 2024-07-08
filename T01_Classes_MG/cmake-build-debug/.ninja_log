@@ -1,0 +1,12 @@
+# ninja log v6
+20	510	7421541433419896	CMakeFiles/T01_Classes_MG.dir/Student.cpp.obj	d3a6539c9f7834fe
+16	2230	7421540835914593	CMakeFiles/T01_Classes_MG.dir/main.cpp.obj	5465282c6a7bffd5
+511	1000	7421541438337305	T01_Classes_MG.exe	712825f4707adf4a
+200	833	7421549979676218	CMakeFiles/T01_Classes_MG.dir/CarletonStudent.cpp.obj	44df0e64c853ff75
+18	860	7421549977850110	CMakeFiles/T01_Classes_MG.dir/main.cpp.obj	5465282c6a7bffd5
+149	867	7421549979171930	CMakeFiles/T01_Classes_MG.dir/Student.cpp.obj	d3a6539c9f7834fe
+867	1380	7421549986338437	T01_Classes_MG.exe	de3079d3e986f737
+25	1345	7421551197930670	CMakeFiles/T01_Classes_MG.dir/main.cpp.obj	5465282c6a7bffd5
+143	1378	7421551199117495	CMakeFiles/T01_Classes_MG.dir/CarletonStudent.cpp.obj	44df0e64c853ff75
+88	1391	7421551198568961	CMakeFiles/T01_Classes_MG.dir/Student.cpp.obj	d3a6539c9f7834fe
+1392	2173	7421551211599666	T01_Classes_MG.exe	de3079d3e986f737
