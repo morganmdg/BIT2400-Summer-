@@ -2,9 +2,8 @@
 // Created by morga on 2024-07-10.
 //
 
-#ifndef PAINT_H
-#define PAINT_H
-
+#ifndef PAINTJOB_H
+#define PAINTJOB_H
 #include "stdio.h"
 
 //unsigned short int cNumCans = 0, cPaintCost = 0;
@@ -24,5 +23,4 @@ private:
     float Budget = 0.0f;
     float CanPrice = 0.0f;
 };
-
-#endif //PAINT_H
+#endif //PAINTJOB_H
