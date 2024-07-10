@@ -2,6 +2,7 @@
 // Created by morga on 2024-07-10.
 //
 #include "PaintJob.h"
+#include <math.h>
 
 //Function to set the values of height/width/length based on user input
 void PaintJob::areaCalc(){
@@ -14,7 +15,7 @@ void PaintJob::paintCalc(){
     // a Liter of paint covers 100 square feet
     //Loop through to show amount of paint needed for 1,2,and 3 coats
 
-    for(numCoats = 1, numCoats <=3, NumCoats++) {
+    for(NumCoats = 1; NumCoats <=3; NumCoats++) {
 
         PaintNeeded = (Area* NumCoats) / 100.0f;
         printf("Amount of paint needed: %.2f L\n", PaintNeeded);
@@ -23,8 +24,8 @@ void PaintJob::paintCalc(){
         printf("Number of paint cans needed: %hu cans\n", NumCans);
         //Based on user input can price
         PaintCost = NumCans * CanPrice;
-        printf("Paint cost: %hu $\n", PaintCost);
-        printf("The price of %d coat(s) of paint: %hi $\n", (Budget - (NumCoats * PaintCost)));
+        printf("Paint cost: %f $\n", PaintCost);
+        printf("The price of coat(s) of paint: %f $\n", (Budget - (NumCoats * PaintCost)));
 
     }
 };
