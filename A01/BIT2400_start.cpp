@@ -1,27 +1,13 @@
 #include <stdio.h>
 #include <math.h>
+#include "PaintJob.h"
 
 using namespace std;
 
-class PaintJob {
-public:
-	// Add your methods here
-	unsigned short int NumCans;
-	float CoatCost;
-	float PaintNeeded;
-private:
-	float Height, Width, Length, Area;
-	float Budget;
-	float CanPrice;
-};
-
 int main()
 {
+	//function for budget
 	unsigned short int iBudget = 0;	// Can be short int or float
-
-	printf("Enter your budget: ");
-	scanf_s("%hu", &iBudget);		// if float, then need to use %f
-
 	//Declaring variables
 	float iHeight = 0.0f, iWidth = 0.0f, iLength = 0.0f, cArea = 0.0f, cPaintNeeded = 0.0f;
 	unsigned short int cNumCans = 0, cPaintCost = 0;
