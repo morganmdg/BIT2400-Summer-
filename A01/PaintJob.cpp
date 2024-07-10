@@ -4,28 +4,9 @@
 
 #include "PaintJob.h"
 
-//Function to prompt user to enter budget
-void PaintJob::userBudget(){
-    printf("Enter your budget: ");
-    scanf("%f", &Budget);
-};
-
 //Function to set the values of height/width/length based on user input
 void PaintJob::areaInput(){
-
-    printf("Enter wall heigth (feet): ");
-    scanf_s("%f", &Height);
-
-    printf("Enter wall width (feet): ");
-    scanf_s("%f", &Width);
-
-    printf("Enter wall length (feet): ");
-    scanf_s("%f", &Length);
-
-    //Output
-    printf("\n******************************\n\n");
-
-    //Calculate and set the rooms area based on these values
+    //Calculate and set the rooms area based on use input heigh
     // Wall area = 2*((HxW)+(HxL))
     cArea = 2.0f * ((Height * Width) + (Height * Length));
     printf("Wall area: %.2f ft^2\n", Area);
