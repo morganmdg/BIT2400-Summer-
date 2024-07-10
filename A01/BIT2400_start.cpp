@@ -27,7 +27,6 @@ int main()
 	unsigned short int cNumCans = 0, cPaintCost = 0;
 
 	//Function to set the values of height/width/length based on user input
-	void userInput(){
 	printf("Enter wall heigth (feet): ");
 	scanf_s("%f", &iHeight);
 
@@ -36,7 +35,6 @@ int main()
 
 	printf("Enter wall length (feet): ");
 	scanf_s("%f", &iLength);
-	};
 
 	//Output
 	printf("\n******************************\n\n");

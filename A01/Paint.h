@@ -5,7 +5,5 @@
 #ifndef PAINT_H
 #define PAINT_H
 
-#include "stdio.h"
-
 
 #endif //PAINT_H
