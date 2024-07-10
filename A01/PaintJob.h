@@ -12,8 +12,9 @@
 class PaintJob {
 public:
     // Add your methods here
-    void areaCalc();
-    void paintCalc();
+    areaCalc();
+    ~areaCalc();
+    float paintCalc();
     unsigned short int NumCoats = 0;
     unsigned short int NumCans = 0;
     float CoatCost = 0.0f;
