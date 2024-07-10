@@ -15,6 +15,7 @@ public:
     void areaCalc();
     void paintCalc();
     void ~clearInput();
+    unsigned short int NumCoats = 0;
     unsigned short int NumCans = 0;
     float CoatCost = 0.0f;
     float PaintNeeded = 0.0f;
