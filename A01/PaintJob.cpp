@@ -5,13 +5,16 @@
 #include <math.h>
 
 //Function to set the values of height/width/length based on user input (child class that inherits private specifiers)
- PaintJob::areaCalc(){
-    //Calculate and set the rooms area based on use input (Wall area = 2*((HxW)+(HxL)))
-    Area = 2.0f * ((Height * Width) + (Height * Length));
+ double PaintJob::areaCalc(){
+     //Calculate and set the rooms area based on use input (Wall area = 2*((HxW)+(HxL)))
+     Area = 2.0f * ((Height * Width) + (Height * Length));
+     return Area;
 };
 
-PaintJob::~areaCalc() {
-    Height = Width = Length = Area = 0;
+//Create a class destructor that will be used to reset the values of all member variables to zeros
+PaintJob::~PaintJob() {
+    Height = 0.0f, Width = 0.0f, Length = 0.0f, Area = 0.0f, PaintNeeded = 0.0f;
+    NumCans = 0, PaintCost = 0;
 };
 float PaintJob::paintCalc(){
     //Function to calculate the price of paint based on the number of coats and the price of the can
