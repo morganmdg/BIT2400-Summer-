@@ -21,7 +21,17 @@ int main()
 	printf("Enter wall length (feet): ");
 	scanf_s("%f", &Length);
 
+	//Prompt user to enter price of the can of paint
+	printf("Enter price of can of paint: %f\n", CanPrice);
+
 	//Output
 	printf("\n******************************\n\n");
+
+	printf("Wall area: %.2f ft^2\n", Area);
+
+	//Output
+	printf("\n******************************\n\n");
+
+
 	return 0;
 }
