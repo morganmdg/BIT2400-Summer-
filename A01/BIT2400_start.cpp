@@ -7,6 +7,9 @@ using namespace std;
 
 int main()
 {
+    float Height, Width, Length;
+    float Budget, CanPrice, Area;
+
     //Prompt user to enter budget
     printf("Enter your budget: ");
     scanf("%f", &Budget);
