@@ -7,8 +7,8 @@ using namespace std;
 
 int main()
 {
-    float Height, Width, Length;
-    float Budget, CanPrice, Area;
+
+    PaintJob cpaintJob;
 
     //Prompt user to enter budget
     printf("Enter your budget: ");
@@ -29,6 +29,8 @@ int main()
 
     //Output
     printf("\n******************************\n\n");
+
+    cpaintJob.getArea();
 
     printf("Wall area: %.2f ft^2\n", Area);
 
