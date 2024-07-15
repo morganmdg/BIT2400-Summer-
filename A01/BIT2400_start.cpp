@@ -9,9 +9,11 @@ int main()
 {
     float Height, Width, Length;
     float Budget, CanPrice;
+    float PaintCost, PaintNeeded;
+    int NumCoats = 1;
+    int NumCans;
 
     PaintJob cpaintJob;
-    /*PaintJob cpaintCalc;*/
 
     //Prompt user to enter budget
     printf("Enter your budget: ");
@@ -27,23 +29,30 @@ int main()
     printf("Enter wall length (feet): ");
     scanf_s(" %f", &Length);
 
-    //Calculate and outupt area
-    float Area = cpaintJob.getArea(Height, Width, Length);
+    //Prompt user to enter price of the can of paint
+    printf("Enter price of can of paint: %d\n", CanPrice);
 
+    //Output
+    printf("\n******************************\n\n");
+
+    //Calculate and outupt wall area
+    float Area = cpaintJob.getArea(Height, Width, Length);
     printf("Wall area: %.2f ft^2\n", Area);
 
-    /*Prompt user to enter price of the can of paint
-    printf("Enter price of can of paint: %d\n", CanPrice);*/
-
-    //Output
     printf("\n******************************\n\n");
 
+    PaintJob cpaintCalc;
 
-    //Output
-    printf("\n******************************\n\n");
+    PaintNeeded = NumCans = PaintCost = cpaintJob.paintCalc();
 
-    /*
-    cpaintJob.paintCalc();*/
+            printf("Amount of paint needed: %.2f L\n", PaintNeeded);
+
+            printf("Number of paint cans needed: %hu cans\n", NumCans);
+
+            printf("Paint cost: %f $\n", PaintCost);
+
+            printf("The price of coat(s) of paint: %f $\n", (Budget - (NumCoats * PaintCost)));
+
 
     return 0;
 }

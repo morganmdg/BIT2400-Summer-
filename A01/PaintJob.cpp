@@ -21,17 +21,12 @@ PaintJob::~PaintJob() {
     //Function to calculate the price of paint based on the number of coats and the price of the can
     // a Liter of paint covers 100 square feet
     //Loop through to show amount of paint needed for 1,2,and 3 coats
-
     for(NumCoats = 1; NumCoats <=3; NumCoats++) {
-
         PaintNeeded = (Area* NumCoats) / 100.0f;
-        printf("Amount of paint needed: %.2f L\n", PaintNeeded);
         //number of 3.7 Liter cans needed to paint the wall
         NumCans = ceil(PaintNeeded / 3.7f);
-        printf("Number of paint cans needed: %hu cans\n", NumCans);
         //Based on user input can price
         PaintCost = NumCans * CanPrice;
-        printf("Paint cost: %f $\n", PaintCost);
-        printf("The price of coat(s) of paint: %f $\n", (Budget - (NumCoats * PaintCost)));
     }
+       return PaintNeeded, NumCans, PaintCost;
 };
