@@ -24,10 +24,11 @@ float PaintJob::getPaintNeeded(int NumCoats, float Area) {
     return PaintNeeded;
 }
 
-float PaintJob::paintCalc(){
+float PaintJob::paintCalc(float PaintNeeded, float CanPrice) {
     //Function to calculate the price of paint based on the number of coats and the price of the can
-        //number of 3.7 Liter cans needed to paint the wall
-        NumCans = ceil(PaintNeeded / 3.7f);
-        //Based on user input can price
-        PaintCost = NumCans * CanPrice;
-};
+    //number of 3.7 Liter cans needed to paint the wall
+    NumCans = ceil(PaintNeeded / 3.7f);
+    //Based on user input can price
+    PaintCost = NumCans * CanPrice;
+    return PaintCost;
+}
