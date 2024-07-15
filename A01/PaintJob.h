@@ -12,9 +12,9 @@
 class PaintJob {
 public:
     // Add your methods here
-    double setArea();
-    double getArea(float Height, float Width, float Length);
     ~PaintJob();
+    double getArea(float Height, float Width, float Length);
+    float getPaintNeeded(int NumCoats, float Area);
     float paintCalc();
     unsigned short int NumCoats = 0;
     unsigned short int NumCans = 0;

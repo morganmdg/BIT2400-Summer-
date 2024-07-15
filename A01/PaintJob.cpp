@@ -17,16 +17,17 @@ PaintJob::~PaintJob() {
     NumCans = 0, PaintCost = 0;
 };
 
-   float PaintJob::paintCalc(){
-    //Function to calculate the price of paint based on the number of coats and the price of the can
+//Create getter for paint needed
+float PaintJob::getPaintNeeded(int NumCoats, float Area) {
     // a Liter of paint covers 100 square feet
-    //Loop through to show amount of paint needed for 1,2,and 3 coats
-    for(NumCoats = 1; NumCoats <=3; NumCoats++) {
-        PaintNeeded = (Area* NumCoats) / 100.0f;
+    PaintNeeded = (NumCoats * Area) / 100.0f;
+    return PaintNeeded;
+}
+
+float PaintJob::paintCalc(){
+    //Function to calculate the price of paint based on the number of coats and the price of the can
         //number of 3.7 Liter cans needed to paint the wall
         NumCans = ceil(PaintNeeded / 3.7f);
         //Based on user input can price
         PaintCost = NumCans * CanPrice;
-    }
-       return PaintNeeded, NumCans, PaintCost;
 };
