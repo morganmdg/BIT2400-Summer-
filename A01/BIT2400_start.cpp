@@ -7,6 +7,8 @@ using namespace std;
 
 int main()
 {
+    float Height, Width, Length;
+    float Budget, CanPrice, Area;
 
     PaintJob cpaintJob;
 
