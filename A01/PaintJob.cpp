@@ -5,7 +5,7 @@
 #include <math.h>
 
 //Function to set the values of height/width/length based on user input (child class that inherits private specifiers)
- double PaintJob::getArea(){
+ double PaintJob::getArea(float Height, float Width, float Length){
      //Calculate and set the rooms area based on use input (Wall area = 2*((HxW)+(HxL)))
      Area = 2.0f * ((Height * Width) + (Height * Length));
      return Area;

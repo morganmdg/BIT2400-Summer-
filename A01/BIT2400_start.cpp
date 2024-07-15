@@ -7,14 +7,14 @@ using namespace std;
 
 int main()
 {
-    float Height, Width, Length;
-    float Budget, CanPrice, Area;
+    float Height, Width, Length, Area;
 
     PaintJob cpaintJob;
+    /*PaintJob cpaintCalc;*/
 
-    //Prompt user to enter budget
+    /*Prompt user to enter budget
     printf("Enter your budget: ");
-    scanf("%f", &Budget);
+    scanf("%f", &Budget);*/
 #
     //Prompt user to enter wall dimensions
     printf("Enter wall heigth (feet): ");
@@ -26,19 +26,21 @@ int main()
     printf("Enter wall length (feet): ");
     scanf_s("%f", &Length);
 
-    //Prompt user to enter price of the can of paint
-    printf("Enter price of can of paint: %f\n", CanPrice);
+    /*Prompt user to enter price of the can of paint
+    printf("Enter price of can of paint: %d\n", CanPrice);*/
 
     //Output
     printf("\n******************************\n\n");
 
-    cpaintJob.getArea();
+    cpaintJob.getArea(Height, Width, Length);
 
     printf("Wall area: %.2f ft^2\n", Area);
 
     //Output
     printf("\n******************************\n\n");
 
+    /*
+    cpaintJob.paintCalc();*/
 
     return 0;
 }

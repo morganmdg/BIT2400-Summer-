@@ -13,7 +13,7 @@ class PaintJob {
 public:
     // Add your methods here
     double setArea();
-    double getArea();
+    double getArea(float Height, float Width, float Length);
     ~PaintJob();
     float paintCalc();
     unsigned short int NumCoats = 0;
