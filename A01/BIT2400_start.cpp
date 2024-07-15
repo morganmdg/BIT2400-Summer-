@@ -27,7 +27,7 @@ int main()
     scanf_s(" %f", &Length);
 
     //Prompt user to enter price of the can of paint
-    printf("Enter price of can of paint: %p\n", &CanPrice);
+    printf("Enter price of can of paint: %f\n", &CanPrice);
 
     //Output
     printf("\n******************************\n\n");
@@ -39,23 +39,17 @@ int main()
     printf("\n******************************\n\n");
 
     int NumCoats = 1;
-
-    float PaintNeeded = cpaintJob.getPaintNeeded(NumCoats, Area);
-    printf("Amount of paint needed: %.2f L\n", PaintNeeded);
-
-
-    float NumCans = cpaintJob.getpaintCalc(PaintNeeded, CanPrice);
-    printf("Number of paint cans needed: %hu cans\n", NumCans);
-    float PaintCost = cpaintJob.getpaintCalc(PaintNeeded, CanPrice);
-    printf("Paint cost: %f $\n", PaintCost);
-
-
-
-    /*Loop through to show amount of paint needed for 1,2,and 3 coats
+    //Loop through to show amount of paint needed for 1,2,and 3 coats
     for(NumCoats = 1; NumCoats <=3; NumCoats++) {
-
+        printf("\n******************************\n\n");
+        float PaintNeeded = cpaintJob.getPaintNeeded(NumCoats, Area);
+        printf("Amount of paint needed: %.2f L\n", PaintNeeded);
+        float NumCans = cpaintJob.getpaintCalc(PaintNeeded, CanPrice);
+        printf("Number of paint cans needed: %hu cans\n", NumCans);
+        float PaintCost = cpaintJob.getpaintCalc(PaintNeeded, CanPrice);
+        printf("Paint cost: %f $\n", PaintCost);
         printf("The price of coat(s) of paint: %f $\n", (Budget - (NumCoats * PaintCost)));
-    }*/
+    }
 
     //reset values to 0
     cpaintJob.~PaintJob();
