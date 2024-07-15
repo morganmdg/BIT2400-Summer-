@@ -44,13 +44,15 @@ int main()
     printf("Amount of paint needed: %.2f L\n", PaintNeeded);
 
 
+    float NumCans = cpaintJob.getpaintCalc(PaintNeeded, CanPrice);
+    printf("Number of paint cans needed: %hu cans\n", NumCans);
+    float PaintCost = cpaintJob.getpaintCalc(PaintNeeded, CanPrice);
+    printf("Paint cost: %f $\n", PaintCost);
+
+
+
     /*Loop through to show amount of paint needed for 1,2,and 3 coats
     for(NumCoats = 1; NumCoats <=3; NumCoats++) {
-
-
-        printf("Number of paint cans needed: %hu cans\n", NumCans);
-
-        printf("Paint cost: %f $\n", PaintCost);
 
         printf("The price of coat(s) of paint: %f $\n", (Budget - (NumCoats * PaintCost)));
     }*/
