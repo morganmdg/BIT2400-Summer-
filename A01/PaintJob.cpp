@@ -2,7 +2,7 @@
 // Created by morga on 2024-07-10.
 //
 #include "PaintJob.h"
-#include <math.h>
+#include <cmath>
 
 //Default constructor to intitalise variables
 PaintJob::PaintJob() {
@@ -72,7 +72,7 @@ float PaintJob::getpaintCalc(float cPaintNeeded, const float iCanPrice) {
     return PaintCost;
 }
 
-//Create getter for calculating paint coat cost
+//Getter for calculating paint coat cost
 float PaintJob::getpaintcoatCost(int iNumCoats, const float iBudget, const float iPaintCost) {
     for(iNumCoats = 1; iNumCoats <=3; iNumCoats++) {
         CoatCost = (iBudget - (iNumCoats * iPaintCost));
