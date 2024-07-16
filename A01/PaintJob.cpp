@@ -4,9 +4,9 @@
 #include "PaintJob.h"
 #include <math.h>
 
-//Constructor to set variables
-PaintJob::PaintJob(float iHeight, float iWidth, float iLength, float iArea) {
-    Area = iArea;
+//Constructor to set variables based on user input and calcuate area
+PaintJob::PaintJob(float iHeight, float iWidth, float iLength) {
+    Area =  Area = 2.0f * ((Height * Width) + (Height * Length));
     Height = iHeight;
     Width = iWidth;
     Length = iLength;
@@ -31,10 +31,8 @@ void PaintJob::setLength(float iLength) {
     Length = iLength;
 }*/
 
-//Function to set the values of height/width/length and calculate area based on user input
+//Method to return area based on user input
  double PaintJob::getArea(float Height, float Width, float Length){
-     //Calculate and set the rooms area based on use input (Wall area = 2*((HxW)+(HxL)))
-     Area = 2.0f * ((Height * Width) + (Height * Length));
      return Area;
 }
 
