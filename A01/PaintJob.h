@@ -10,7 +10,7 @@
 class PaintJob {
 public:
     //Constructor + Destructor
-    PaintJob();
+    PaintJob(float Height, float Width, float Length, float Area);
     ~PaintJob();
     //Setters
     void setArea(float Area);

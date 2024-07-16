@@ -20,6 +20,7 @@ int main()
     //Prompt user to enter wall height (in feet)
     printf(" Enter wall heigth (feet): ");
     scanf_s(" %f", &Height);
+    cPaintJob.setHeight(Height);
 
     //Prompt user to enter wall width (in feet)
     printf("Enter wall width (feet): ");
