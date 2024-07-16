@@ -27,7 +27,8 @@ int main()
     scanf_s(" %f", &Length);
 
     //Prompt user to enter price of the can of paint
-    printf("Enter price of can of paint: %f\n", &CanPrice);
+    printf("Enter price of can of paint:  ");
+    scanf_s(" %f", &CanPrice);
 
     //Output
     printf("\n******************************\n\n");
