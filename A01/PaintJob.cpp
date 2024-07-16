@@ -14,26 +14,26 @@ PaintJob::PaintJob() {
 }
 
 //Function to set the values of height/width/length and calcuolate area based on user input
- double PaintJob::getArea(float Height, float Width, float Length){
+ double PaintJob::getArea(const float Height, const float Width, const float Length){
      //Calculate and set the rooms area based on use input (Wall area = 2*((HxW)+(HxL)))
      Area = 2.0f * ((Height * Width) + (Height * Length));
      return Area;
 }
 
 //Create getter for paint needed
-float PaintJob::getpaintNeeded(int NumCoats, float Area) {
+float PaintJob::getpaintNeeded(const int NumCoats, const float Area) {
     // a Liter of paint covers 100 square feet
     PaintNeeded = (NumCoats * Area) / 100.0f;
     return PaintNeeded;
 }
 
-float PaintJob::getnumCans(float PaintNeeded) {
+int PaintJob::getnumCans(const float PaintNeeded) {
     //number of 3.7 Liter cans needed to paint the wall
     NumCans = ceil(PaintNeeded / 3.7f);
     return NumCans;
 }
 //Create getter for paint calculations
-float PaintJob::getpaintCalc(float PaintNeeded, float CanPrice) {
+float PaintJob::getpaintCalc(float PaintNeeded, const float CanPrice) {
     //Function to calculate the price of paint based on the number of coats and the price of the can
     //Based on user input can price
     PaintCost = NumCans * CanPrice;
@@ -41,8 +41,8 @@ float PaintJob::getpaintCalc(float PaintNeeded, float CanPrice) {
 }
 
 //Create getter for paint coat cost
-float PaintJob::getpaintcoatCost(int NumCoats, float Budget, float PaintCost) {
-    CoatCost = Budget - (NumCoats * PaintCost);
+float PaintJob::getpaintcoatCost(const int NumCoats, const float Budget, const float PaintCost) {
+    CoatCost = (Budget - (NumCoats * PaintCost));
     return CoatCost;
 
 }

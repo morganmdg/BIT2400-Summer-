@@ -17,7 +17,7 @@ public:
     double getArea(float Height, float Width, float Length);
     float getpaintNeeded(int NumCoats, float Area);
     float getpaintCalc(float PaintNeeded, float CanPrice);
-    float getnumCans(float PaintNeeded);
+    int getnumCans(float PaintNeeded);
     float getpaintcoatCost(int NumCoats, float Budget, float PaintCost);
     unsigned short int NumCoats = 0;
     unsigned short int NumCans = 0;
