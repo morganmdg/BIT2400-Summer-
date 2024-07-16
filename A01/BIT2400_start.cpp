@@ -36,6 +36,10 @@ int main()
     //Class instance/object
     PaintJob cPaintJob (Height, Width, Length);
 
+    //Setters for budget and can price
+    cPaintJob.setBudget(Budget);
+    cPaintJob.setCanPrice(CanPrice);
+
         //Calculate and outupt wall area
         float Area = cPaintJob.getArea();
         printf("Wall area: %.2f ft^2\n", Area);
