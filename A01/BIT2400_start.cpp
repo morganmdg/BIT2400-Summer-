@@ -34,7 +34,7 @@ int main()
     printf("\n******************************\n\n");
 
     //Class instance/object
-    PaintJob cPaintJob (Height, Width, Length, Budget, CanPrice);
+    PaintJob cPaintJob (Height, Width, Length);
 
         //Calculate and outupt wall area
         float Area = cPaintJob.getArea();

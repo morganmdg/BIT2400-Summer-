@@ -17,15 +17,29 @@ PaintJob::PaintJob() {
     PaintNeeded = 0.0f;
 }
 //Constructor to set variables based on user input and calcuate area
-PaintJob::PaintJob(float iHeight, float iWidth, float iLength, float iBudget, float iCanPrice) {
+PaintJob::PaintJob(float iHeight, float iWidth, float iLength) {
     Height = iHeight;
     Width = iWidth;
     Length = iLength;
-    Budget = iBudget;
-    CanPrice = iCanPrice;
 
     //Calculate area based on user input:
     Area =  Area = 2.0f * ((Height * Width) + (Height * Length));
+}
+
+void PaintJob::setBudget(float iBudget) {
+    Budget = iBudget;
+}
+
+void PaintJob::setCanPrice(float iCanPrice) {
+    CanPrice = iCanPrice;
+}
+
+float PaintJob::getBudget(float iBudget) {
+    return Budget;
+
+}
+float PaintJob::getCanPrice(float iCanPrice) {
+    return CanPrice;
 }
 
 //Method to return area based on user input
@@ -61,7 +75,7 @@ float PaintJob::getpaintcoatCost(int NumCoats, const float Budget, const float P
     }
 }
 
-//Create a class destructor that will be used to reset the values of all member variables to zeros
+//Destructor to reset the values of all member variables to zeros
 PaintJob::~PaintJob() {
     Height = 0.0f;
     Width = 0.0f;
