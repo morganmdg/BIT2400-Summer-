@@ -9,21 +9,23 @@
 
 class PaintJob {
 public:
-    //Constructor + Destructor
+    //Constructors
     PaintJob();
     PaintJob(float iHeight, float iWidth, float iLength);
+    //Destructor
     ~PaintJob();
     //Setters
     void setBudget(float iBudget);
     void setCanPrice(float iCanPrice);
-    float getBudget(float iBudget);
-    float getCanPrice(float iCanPrice);
     //Getters
+    float getBudget();
+    float getCanPrice();
     double getArea();
-    float getpaintNeeded(int NumCoats, float Area);
-    float getpaintCalc(float PaintNeeded, float CanPrice);
-    int getnumCans(float PaintNeeded);
-    float getpaintcoatCost(int NumCoats, float Budget, float PaintCost);
+    float getpaintNeeded(int iNumCoats, float cArea);
+    float getpaintCalc(float cPaintNeeded, float iCanPrice);
+    int getnumCans(float cPaintNeeded);
+    float getpaintcoatCost(int iNumCoats, float iBudget, float iPaintCost);
+    //Public member vairables
     unsigned short int NumCoats = 0;
     unsigned short int NumCans = 0;
     float CoatCost = 0.0f;
