@@ -7,13 +7,16 @@
 #include "stdio.h"
 #pragma once
 
-//unsigned short int cNumCans = 0, cPaintCost = 0;
-
 class PaintJob {
 public:
-    // Add your methods here
+    //Constructor + Destructor
     PaintJob();
     ~PaintJob();
+    void setArea(double Area);
+    void setHeight(double Height);
+    void setWidth(double Width);
+    void setLength(double Length);
+    //Getters
     double getArea(float Height, float Width, float Length);
     float getpaintNeeded(int NumCoats, float Area);
     float getpaintCalc(float PaintNeeded, float CanPrice);
