@@ -2,7 +2,7 @@
 // Created by morga on 2024-07-10.
 //
 #include "PaintJob.h"
-#include <math.h>
+#include <cmath>
 
 //Constructor to set variables
 PaintJob::PaintJob() {
@@ -36,15 +36,16 @@ int PaintJob::getnumCans(const float PaintNeeded) {
 float PaintJob::getpaintCalc(float PaintNeeded, const float CanPrice) {
     //Function to calculate the price of paint based on the number of coats and the price of the can
     //Based on user input can price
-    PaintCost = NumCans * CanPrice;
+    PaintCost = (NumCans * CanPrice);
     return PaintCost;
 }
 
 //Create getter for paint coat cost
-float PaintJob::getpaintcoatCost(const int NumCoats, const float Budget, const float PaintCost) {
-    CoatCost = (Budget - (NumCoats * PaintCost));
-    return CoatCost;
-
+float PaintJob::getpaintcoatCost(int NumCoats, const float Budget, const float PaintCost) {
+    for(NumCoats = 1; NumCoats <=3; NumCoats++) {
+        CoatCost = (Budget - (NumCoats * PaintCost));
+        return CoatCost;
+    }
 }
 
 //Create a class destructor that will be used to reset the values of all member variables to zeros

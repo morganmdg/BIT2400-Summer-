@@ -43,16 +43,13 @@ int main()
         printf("\n******************************\n\n");
         float PaintNeeded = cPaintJob.getpaintNeeded(NumCoats, Area);
         printf("Amount of paint needed: %.2f L\n", PaintNeeded);
-        float NumCans = cPaintJob.getnumCans(PaintNeeded);
+        int NumCans = cPaintJob.getnumCans(PaintNeeded);
         printf("Number of paint cans needed: %d cans\n", NumCans);
         float PaintCost = cPaintJob.getpaintCalc(PaintNeeded, CanPrice);
-        printf("Paint cost: %f $\n", PaintCost);
+        printf("Paint cost: %.2f $\n", PaintCost);
         float CoatCost = cPaintJob.getpaintcoatCost(NumCoats, Budget, PaintCost);
-        printf("The price of %d coat(s) of paint: %f $\n", NumCoats, CoatCost);
+        printf("The amount of money left in the budget after %d coat(s) of paint: %.2f $\n", NumCoats, CoatCost);
     }
-
-    //reset values to 0
-    cPaintJob.~PaintJob();
 
     return 0;
 }
