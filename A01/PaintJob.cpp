@@ -14,20 +14,23 @@ PaintJob::PaintJob() {
 }
 
 //Set Area
-void PaintJob::setArea(double iArea) {
+void PaintJob::setArea(float iArea) {
     Area = iArea;
 }
 
-void PaintJob::setHeight(double iHeight) {
-    Area = iHeight;
+//Set Height
+void PaintJob::setHeight(float iHeight) {
+    Height = iHeight;
 }
 
-void PaintJob::setWidth(double iWidth) {
-    Area = iWidth;
+//SetWidth
+void PaintJob::setWidth(float iWidth) {
+    Width = iWidth;
 }
 
-void PaintJob::setLength(double iLength) {
-    Area = iLength;
+//Set Length
+void PaintJob::setLength(float iLength) {
+    Length = iLength;
 }
 
 //Function to set the values of height/width/length and calculate area based on user input

@@ -12,10 +12,11 @@ public:
     //Constructor + Destructor
     PaintJob();
     ~PaintJob();
-    void setArea(double Area);
-    void setHeight(double Height);
-    void setWidth(double Width);
-    void setLength(double Length);
+    //Setters
+    void setArea(float Area);
+    void setHeight(float Height);
+    void setWidth(float Width);
+    void setLength(float Length);
     //Getters
     double getArea(float Height, float Width, float Length);
     float getpaintNeeded(int NumCoats, float Area);
