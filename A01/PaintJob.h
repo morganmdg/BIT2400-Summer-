@@ -11,15 +11,10 @@ class PaintJob {
 public:
     //Constructor + Destructor
     PaintJob();
-    PaintJob(float Height, float Width, float Length);
+    PaintJob(float iHeight, float iWidth, float iLength, float Budget, float CanPrice);
     ~PaintJob();
-    /*Setters
-    void setArea(float Area);
-    void setHeight(float Height);
-    void setWidth(float Width);
-    void setLength(float Length);*/
     //Getters
-    double getArea(float Height, float Width, float Length);
+    double getArea();
     float getpaintNeeded(int NumCoats, float Area);
     float getpaintCalc(float PaintNeeded, float CanPrice);
     int getnumCans(float PaintNeeded);

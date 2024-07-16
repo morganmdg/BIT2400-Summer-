@@ -4,35 +4,32 @@
 #include "PaintJob.h"
 #include <math.h>
 
+//Default constructor to intitalise variables
+PaintJob::PaintJob() {
+    Height = 0.0f;
+    Width = 0.0f;
+    Length = 0.0f;
+    Area = 0.0f;
+    NumCoats = 0;
+    NumCans = 0;
+    CoatCost = 0.0f;
+    PaintCost = 0.0f;
+    PaintNeeded = 0.0f;
+}
 //Constructor to set variables based on user input and calcuate area
-PaintJob::PaintJob(float iHeight, float iWidth, float iLength) {
+PaintJob::PaintJob(float iHeight, float iWidth, float iLength, float iBudget, float iCanPrice) {
+    Height = iHeight;
+    Width = iWidth;
+    Length = iLength;
+    Budget = iBudget;
+    CanPrice = iCanPrice;
+
+    //Calculate area based on user input:
     Area =  Area = 2.0f * ((Height * Width) + (Height * Length));
-    Height = iHeight;
-    Width = iWidth;
-    Length = iLength;
 }
-
-/*Set Area
-void PaintJob::setArea(float iArea) {
-    Area = iArea;
-}
-//Set Height
-void PaintJob::setHeight(float iHeight) {
-    Height = iHeight;
-}
-
-//SetWidth
-void PaintJob::setWidth(float iWidth) {
-    Width = iWidth;
-}
-
-//Set Length
-void PaintJob::setLength(float iLength) {
-    Length = iLength;
-}*/
 
 //Method to return area based on user input
- double PaintJob::getArea(float Height, float Width, float Length){
+ double PaintJob::getArea(){
      return Area;
 }
 
@@ -66,6 +63,13 @@ float PaintJob::getpaintcoatCost(int NumCoats, const float Budget, const float P
 
 //Create a class destructor that will be used to reset the values of all member variables to zeros
 PaintJob::~PaintJob() {
-    Height = 0.0f, Width = 0.0f, Length = 0.0f, Area = 0.0f, PaintNeeded = 0.0f;
-    NumCans = 0, PaintCost = 0;
+    Height = 0.0f;
+    Width = 0.0f;
+    Length = 0.0f;
+    Area = 0.0f;
+    NumCoats = 0;
+    NumCans = 0;
+    CoatCost = 0.0f;
+    PaintCost = 0.0f;
+    PaintNeeded = 0.0f;
 };

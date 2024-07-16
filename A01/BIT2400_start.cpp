@@ -8,7 +8,6 @@ int main()
 {
     //Class instance/object
     PaintJob cPaintJob;
-    PaintJob cPaintJob;
 
     //Declaring variables in main
     float Height, Width, Length;
@@ -38,7 +37,7 @@ int main()
     printf("\n******************************\n\n");
 
         //Calculate and outupt wall area
-        float Area = cPaintJob.getArea(Height, Width, Length);
+        float Area = cPaintJob.getArea();
         printf("Wall area: %.2f ft^2\n", Area);
 
         int NumCoats = 0;
