@@ -6,9 +6,6 @@ using namespace std;
 
 int main()
 {
-    //Class instance/object
-    PaintJob cPaintJob;
-
     //Declaring variables in main
     float Height, Width, Length;
     float Budget, CanPrice;
@@ -35,6 +32,9 @@ int main()
 
     //Output
     printf("\n******************************\n\n");
+
+    //Class instance/object
+    PaintJob cPaintJob (Height, Width, Length, Budget, CanPrice);
 
         //Calculate and outupt wall area
         float Area = cPaintJob.getArea();
