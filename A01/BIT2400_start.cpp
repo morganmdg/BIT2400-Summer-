@@ -36,8 +36,6 @@ int main()
     float Area = cpaintJob.getArea(Height, Width, Length);
     printf("Wall area: %.2f ft^2\n", Area);
 
-    printf("\n******************************\n\n");
-
     int NumCoats = 1;
     //Loop through to show amount of paint needed for 1,2,and 3 coats
     for(NumCoats = 1; NumCoats <=3; NumCoats++) {
@@ -48,7 +46,8 @@ int main()
         printf("Number of paint cans needed: %hu cans\n", NumCans);
         float PaintCost = cpaintJob.getpaintCalc(PaintNeeded, CanPrice);
         printf("Paint cost: %f $\n", PaintCost);
-        printf("The price of coat(s) of paint: %f $\n", (Budget - (NumCoats * PaintCost)));
+        float CoatCost = cpaintJob.getpaintcoatCost(NumCoats, Budget, PaintCost);
+        printf("The price of coat(s) of paint: %f $\n", CoatCost);
     }
 
     //reset values to 0

@@ -32,3 +32,9 @@ float PaintJob::getpaintCalc(float PaintNeeded, float CanPrice) {
     PaintCost = NumCans * CanPrice;
     return PaintCost;
 }
+
+float PaintJob::getpaintcoatCost(int NumCoats, float Budget, float PaintCost) {
+    float coatCost = Budget - (NumCoats * PaintCost);
+    return coatCost;
+
+}
