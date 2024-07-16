@@ -7,7 +7,6 @@ using namespace std;
 
 int main()
 {
-
     PaintJob cPaintJob;
 
     float Height, Width, Length;
@@ -44,7 +43,7 @@ int main()
         printf("\n******************************\n\n");
         float PaintNeeded = cPaintJob.getpaintNeeded(NumCoats, Area);
         printf("Amount of paint needed: %.2f L\n", PaintNeeded);
-        float NumCans = cPaintJob.getpaintCalc(PaintNeeded, CanPrice);
+        float NumCans = cPaintJob.getnumCans(PaintNeeded);
         printf("Number of paint cans needed: %d cans\n", NumCans);
         float PaintCost = cPaintJob.getpaintCalc(PaintNeeded, CanPrice);
         printf("Paint cost: %f $\n", PaintCost);
