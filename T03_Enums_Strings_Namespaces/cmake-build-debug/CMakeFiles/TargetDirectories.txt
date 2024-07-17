@@ -1,0 +1,3 @@
+C:/Users/morga/OneDrive/Documents/BIT2400-Summer-/T03_Enums_Strings_Namespaces/cmake-build-debug/CMakeFiles/T03_Enums_Strings_Namespaces.dir
+C:/Users/morga/OneDrive/Documents/BIT2400-Summer-/T03_Enums_Strings_Namespaces/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/morga/OneDrive/Documents/BIT2400-Summer-/T03_Enums_Strings_Namespaces/cmake-build-debug/CMakeFiles/rebuild_cache.dir

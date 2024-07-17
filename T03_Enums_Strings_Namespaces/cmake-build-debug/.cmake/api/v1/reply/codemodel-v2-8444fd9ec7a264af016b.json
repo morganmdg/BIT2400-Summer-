@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "T03_Enums_Strings_Namespaces",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "T03_Enums_Strings_Namespaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-T03_Enums_Strings_Namespaces-Debug-561b190a94dfb08d9f56.json",
+					"name" : "T03_Enums_Strings_Namespaces",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/morga/OneDrive/Documents/BIT2400-Summer-/T03_Enums_Strings_Namespaces/cmake-build-debug",
+		"source" : "C:/Users/morga/OneDrive/Documents/BIT2400-Summer-/T03_Enums_Strings_Namespaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
