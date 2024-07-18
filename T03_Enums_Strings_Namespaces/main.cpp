@@ -6,6 +6,8 @@
 using namespace std;
 
 int main() {
+    srand(time(NULL));
+
     enum State {
         QUIT,
         PLAY,

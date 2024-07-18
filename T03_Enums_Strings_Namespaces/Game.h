@@ -11,13 +11,21 @@
 using namespace std;
 
 namespace game {
-    struct Hero {
-    string name = "";
-    int health = 5;
-    int defense = 0;
-    int attack = 0;
+        struct Hero {
+        string name = "";
+        int healthMax = 5;
+        int health = 5;
+        int defense = 2;
+        int attack = 0;
     };
 
     void play ();
+    bool fight(Hero* player);
+    void levelup(Hero* player);
+    void levelup(Hero* player);
+    void attack(Hero* a, Hero* b);
+    void showstats(Hero hero);
+    string nameGenerator();
+
 }
 #endif //GAME_H
