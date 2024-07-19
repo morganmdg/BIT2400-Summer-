@@ -12,7 +12,14 @@ public:
     double x, y;
 
     Vector2D();
+    Vector2D(double a, double b);
 
     void print();
+
+    double magnitude();
+    void normalise();
+
+    double dot(Vector2D b);
+    double angle(Vector2D b);
 };
 #endif //VECTOR2D_H

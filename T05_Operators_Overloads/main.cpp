@@ -4,10 +4,7 @@
 
 int main()
 {
-   Vector2D vect;
+   Vector2D vect(5, 3);
    vect.print();
 
-   vect.x = 1;
-   vect.y = 0;
-   vect.print();
 }
