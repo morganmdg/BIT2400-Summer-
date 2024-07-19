@@ -61,6 +61,12 @@ build CMakeFiles/T04_Methods_Virtuals.dir/Animal.cpp.obj: CXX_COMPILER__T04_Meth
   OBJECT_DIR = CMakeFiles\T04_Methods_Virtuals.dir
   OBJECT_FILE_DIR = CMakeFiles\T04_Methods_Virtuals.dir
 
+build CMakeFiles/T04_Methods_Virtuals.dir/Dog.cpp.obj: CXX_COMPILER__T04_Methods_Virtuals_unscanned_Debug C$:/Users/morga/OneDrive/Documents/BIT2400-Summer-/T04_Methods_Virtuals/Dog.cpp || cmake_object_order_depends_target_T04_Methods_Virtuals
+  DEP_FILE = CMakeFiles\T04_Methods_Virtuals.dir\Dog.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\T04_Methods_Virtuals.dir
+  OBJECT_FILE_DIR = CMakeFiles\T04_Methods_Virtuals.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target T04_Methods_Virtuals
@@ -69,7 +75,7 @@ build CMakeFiles/T04_Methods_Virtuals.dir/Animal.cpp.obj: CXX_COMPILER__T04_Meth
 #############################################
 # Link the executable T04_Methods_Virtuals.exe
 
-build T04_Methods_Virtuals.exe: CXX_EXECUTABLE_LINKER__T04_Methods_Virtuals_Debug CMakeFiles/T04_Methods_Virtuals.dir/main.cpp.obj CMakeFiles/T04_Methods_Virtuals.dir/Animal.cpp.obj
+build T04_Methods_Virtuals.exe: CXX_EXECUTABLE_LINKER__T04_Methods_Virtuals_Debug CMakeFiles/T04_Methods_Virtuals.dir/main.cpp.obj CMakeFiles/T04_Methods_Virtuals.dir/Animal.cpp.obj CMakeFiles/T04_Methods_Virtuals.dir/Dog.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\T04_Methods_Virtuals.dir

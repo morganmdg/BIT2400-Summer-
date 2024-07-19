@@ -1,0 +1,20 @@
+# ninja log v6
+6	1094	7431058840041372	CMakeFiles/T04_Methods_Virtuals.dir/main.cpp.obj	b3ef6f24c2191114
+1105	1515	7431058851035193	T04_Methods_Virtuals.exe	967932b63aaebdd
+43	1105	7431058840411045	CMakeFiles/T04_Methods_Virtuals.dir/Animal.cpp.obj	7ef2417b71c67baa
+76	1389	7431063411724885	CMakeFiles/T04_Methods_Virtuals.dir/Animal.cpp.obj	7ef2417b71c67baa
+113	1401	7431063412094590	CMakeFiles/T04_Methods_Virtuals.dir/Dog.cpp.obj	a94c353c7a9133ec
+26	1411	7431063411225569	CMakeFiles/T04_Methods_Virtuals.dir/main.cpp.obj	b3ef6f24c2191114
+1411	1939	7431063425072305	T04_Methods_Virtuals.exe	81296f548685d9bf
+39	803	7431063750109745	CMakeFiles/T04_Methods_Virtuals.dir/Dog.cpp.obj	a94c353c7a9133ec
+804	1382	7431063757759558	T04_Methods_Virtuals.exe	81296f548685d9bf
+43	772	7431063990148678	CMakeFiles/T04_Methods_Virtuals.dir/Dog.cpp.obj	a94c353c7a9133ec
+774	1127	7431063997461428	T04_Methods_Virtuals.exe	81296f548685d9bf
+43	827	7431064531140857	CMakeFiles/T04_Methods_Virtuals.dir/main.cpp.obj	b3ef6f24c2191114
+829	1155	7431064538998490	T04_Methods_Virtuals.exe	81296f548685d9bf
+37	772	7431064890831664	CMakeFiles/T04_Methods_Virtuals.dir/main.cpp.obj	b3ef6f24c2191114
+773	1107	7431064898191705	T04_Methods_Virtuals.exe	81296f548685d9bf
+77	1263	7431065232518845	CMakeFiles/T04_Methods_Virtuals.dir/Animal.cpp.obj	7ef2417b71c67baa
+46	1283	7431065232198241	CMakeFiles/T04_Methods_Virtuals.dir/main.cpp.obj	b3ef6f24c2191114
+136	1362	7431065233097283	CMakeFiles/T04_Methods_Virtuals.dir/Dog.cpp.obj	a94c353c7a9133ec
+1363	1717	7431065245365796	T04_Methods_Virtuals.exe	81296f548685d9bf

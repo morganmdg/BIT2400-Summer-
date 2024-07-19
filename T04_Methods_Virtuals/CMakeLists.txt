@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(T04_Methods_Virtuals main.cpp
         Animal.cpp
-        Animal.h)
+        Animal.h
+        Dog.h
+        Dog.cpp)

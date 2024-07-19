@@ -10,11 +10,14 @@
 
 class Animal {
 
+protected:
 std::string name;
 
+public:
 Animal();
-void describe();
+virtual void describe();
 
 };
+
 
 #endif //ANIMAL_H
