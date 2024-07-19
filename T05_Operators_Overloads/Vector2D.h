@@ -21,5 +21,18 @@ public:
 
     double dot(Vector2D b);
     double angle(Vector2D b);
+    double distance(Vector2D b);
+
+    //Operators
+    Vector2D operator+(Vector2D b);
+    Vector2D operator-(Vector2D b);
+    Vector2D operator*(double b);
+
+    void operator+=(Vector2D b);
+    void operator-=(Vector2D b);
+    void operator*=(double b);
+
+    Vector2D operator-();
+    bool operator==(Vector2D b);
 };
 #endif //VECTOR2D_H
