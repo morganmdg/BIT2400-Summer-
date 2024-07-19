@@ -1,7 +1,13 @@
 #include <iostream>
+#include "Vector2D.h"
+
 
 int main()
 {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+   Vector2D vect;
+   vect.print();
+
+   vect.x = 1;
+   vect.y = 0;
+   vect.print();
 }

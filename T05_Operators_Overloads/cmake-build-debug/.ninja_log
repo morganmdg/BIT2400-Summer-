@@ -1,0 +1,7 @@
+# ninja log v6
+22	1276	7431073775982162	CMakeFiles/T05_Operators_Overloads.dir/main.cpp.obj	27ded3accdf6afdd
+100	1288	7431073776760401	CMakeFiles/T05_Operators_Overloads.dir/Vector2D.cpp.obj	f2fb3a9d916aa976
+1288	4304	7431073788641845	T05_Operators_Overloads.exe	77b5d4b0ae4c5e27
+34	798	7431074210540745	CMakeFiles/T05_Operators_Overloads.dir/main.cpp.obj	27ded3accdf6afdd
+800	1636	7431074218196774	T05_Operators_Overloads.exe	77b5d4b0ae4c5e27
+23	577	7431074310604117	T05_Operators_Overloads.exe	77b5d4b0ae4c5e27
