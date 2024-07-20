@@ -3,4 +3,6 @@ project(MidtermPractice)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(MidtermPractice main.cpp)
+add_executable(MidtermPractice main.cpp
+        Employee.h
+        Employee.cpp)
