@@ -1,0 +1,10 @@
+# ninja log v6
+4	941	7432930302421267	CMakeFiles/MidtermPractice5.dir/main.cpp.obj	e8a45c370503a78d
+38	962	7432930302753108	CMakeFiles/MidtermPractice5.dir/Instruments.cpp.obj	bb836dd94ecb8653
+962	1348	7432930311993758	MidtermPractice5.exe	505df8f0600d3925
+106	1054	7432931110960586	CMakeFiles/MidtermPractice5.dir/Instruments.cpp.obj	bb836dd94ecb8653
+15	1095	7432931110413702	CMakeFiles/MidtermPractice5.dir/main.cpp.obj	e8a45c370503a78d
+1095	1762	7432931120854432	MidtermPractice5.exe	505df8f0600d3925
+14	880	7432932886722170	CMakeFiles/MidtermPractice5.dir/main.cpp.obj	e8a45c370503a78d
+49	900	7432932887075708	CMakeFiles/MidtermPractice5.dir/Instruments.cpp.obj	bb836dd94ecb8653
+901	1642	7432932895586865	MidtermPractice5.exe	505df8f0600d3925
