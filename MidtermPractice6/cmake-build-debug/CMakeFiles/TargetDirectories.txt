@@ -1,0 +1,3 @@
+C:/Users/morga/OneDrive/Documents/BIT2400-Summer-/MidtermPractice6/cmake-build-debug/CMakeFiles/MidtermPractice6.dir
+C:/Users/morga/OneDrive/Documents/BIT2400-Summer-/MidtermPractice6/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/morga/OneDrive/Documents/BIT2400-Summer-/MidtermPractice6/cmake-build-debug/CMakeFiles/rebuild_cache.dir
