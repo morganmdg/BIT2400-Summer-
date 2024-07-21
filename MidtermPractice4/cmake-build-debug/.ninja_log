@@ -1,0 +1,13 @@
+# ninja log v6
+170	1481	7432880041311815	CMakeFiles/MidtermPractice4.dir/Student.cpp.obj	78c62d00f6b8f80c
+20	1497	7432880039815274	CMakeFiles/MidtermPractice4.dir/main.cpp.obj	87a27ab015e9d90b
+1497	1921	7432880054584111	MidtermPractice4.exe	b071ea545ac194f0
+56	1024	7432891274169263	CMakeFiles/MidtermPractice4.dir/Student.cpp.obj	78c62d00f6b8f80c
+19	1032	7432891273797988	CMakeFiles/MidtermPractice4.dir/main.cpp.obj	87a27ab015e9d90b
+1032	1360	7432891283922110	MidtermPractice4.exe	b071ea545ac194f0
+19	767	7432893326860953	CMakeFiles/MidtermPractice4.dir/main.cpp.obj	87a27ab015e9d90b
+768	1071	7432893334351739	MidtermPractice4.exe	b071ea545ac194f0
+16	731	7432893603135913	CMakeFiles/MidtermPractice4.dir/main.cpp.obj	87a27ab015e9d90b
+732	1007	7432893610305174	MidtermPractice4.exe	b071ea545ac194f0
+15	1428	7432894739374005	CMakeFiles/MidtermPractice4.dir/Student.cpp.obj	78c62d00f6b8f80c
+1429	1776	7432894753501653	MidtermPractice4.exe	b071ea545ac194f0
