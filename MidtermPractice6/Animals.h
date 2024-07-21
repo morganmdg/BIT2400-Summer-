@@ -5,7 +5,7 @@
 #ifndef ANIMALS_H
 #define ANIMALS_H
 
-
+#pragma once
 
 class Animals {
 

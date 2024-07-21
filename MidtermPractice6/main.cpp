@@ -1,4 +1,8 @@
 #include <iostream>
+#include <string>
+#include "Animals.h"
+
+using namespace std;
 
 int main()
 {

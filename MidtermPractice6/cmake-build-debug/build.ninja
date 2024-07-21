@@ -55,6 +55,12 @@ build CMakeFiles/MidtermPractice6.dir/main.cpp.obj: CXX_COMPILER__MidtermPractic
   OBJECT_DIR = CMakeFiles\MidtermPractice6.dir
   OBJECT_FILE_DIR = CMakeFiles\MidtermPractice6.dir
 
+build CMakeFiles/MidtermPractice6.dir/Animals.cpp.obj: CXX_COMPILER__MidtermPractice6_unscanned_Debug C$:/Users/morga/OneDrive/Documents/BIT2400-Summer-/MidtermPractice6/Animals.cpp || cmake_object_order_depends_target_MidtermPractice6
+  DEP_FILE = CMakeFiles\MidtermPractice6.dir\Animals.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\MidtermPractice6.dir
+  OBJECT_FILE_DIR = CMakeFiles\MidtermPractice6.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target MidtermPractice6
@@ -63,7 +69,7 @@ build CMakeFiles/MidtermPractice6.dir/main.cpp.obj: CXX_COMPILER__MidtermPractic
 #############################################
 # Link the executable MidtermPractice6.exe
 
-build MidtermPractice6.exe: CXX_EXECUTABLE_LINKER__MidtermPractice6_Debug CMakeFiles/MidtermPractice6.dir/main.cpp.obj
+build MidtermPractice6.exe: CXX_EXECUTABLE_LINKER__MidtermPractice6_Debug CMakeFiles/MidtermPractice6.dir/main.cpp.obj CMakeFiles/MidtermPractice6.dir/Animals.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\MidtermPractice6.dir

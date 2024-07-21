@@ -4,4 +4,5 @@ project(MidtermPractice6)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(MidtermPractice6 main.cpp
-        Animals.h)
+        Animals.h
+        Animals.cpp)
