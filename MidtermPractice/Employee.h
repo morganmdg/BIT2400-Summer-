@@ -5,10 +5,24 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
 
-void Employee::getemployeeInfo() {
-    char efirstname = "Karl";
-    char elastname = "Montagne";
-    int employeeid = "1234";
-    char employeetype = "Designer";
-}
+#include <string>
+#include <iostream>
+
+#pragma once
+
+class Employee {
+public:
+    std::string name;
+
+    Employee() {
+        name = " [empty]";
+    }
+
+    void getName();
+
+    void displayName();
+
+};
+
+
 #endif //EMPLOYEE_H
