@@ -6,6 +6,10 @@ using namespace std;
 
 int main()
 {
-    std::cout << "Hello, World!" << std::endl;
+    cout << "Below is the following information about your chosen dog breed: "  << endl;
+
+    Temperment t;
+    t.displayAttributes();
+
     return 0;
 }
