@@ -3,4 +3,6 @@ project(MidtermPractice5)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(MidtermPractice5 main.cpp)
+add_executable(MidtermPractice5 main.cpp
+        Instruments.h
+        Instruments.cpp)
