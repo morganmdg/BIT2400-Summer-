@@ -1,4 +1,8 @@
 #include <iostream>
+#include <string>
+#include "birdHouse.h"
+
+using namespace std;
 
 int main()
 {

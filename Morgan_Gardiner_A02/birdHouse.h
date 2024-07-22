@@ -5,7 +5,7 @@
 #ifndef BIRDHOUSE_H
 #define BIRDHOUSE_H
 
-
+#pragma once
 
 class birdHouse {
 
