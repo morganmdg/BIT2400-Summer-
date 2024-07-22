@@ -1,3 +1,4 @@
+#include <fstream>
 #include <iostream>
 #include <string>
 #include "birdHouse.h"
@@ -16,4 +17,9 @@ int main()
     string filenameStr = inputStr + extensionStr;
 
     cout << "Confirming you will be reading from the " << filenameStr << " file. " << endl;
+
+    string filename = filenameStr;
+
+    birdHouse startbirdHouse(filename);
+
 }
