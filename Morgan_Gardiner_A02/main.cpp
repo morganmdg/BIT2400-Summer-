@@ -20,7 +20,7 @@ int main()
 
     string filename = filenameStr;
 
-    string filepathStr = "../Morgan_Gardiner_A02/cmake-build-debug/";
+    string filepathStr = "./";
 
     string namepathStr = filepathStr + filenameStr;
 
