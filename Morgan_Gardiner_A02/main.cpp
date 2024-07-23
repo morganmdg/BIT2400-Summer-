@@ -2,11 +2,16 @@
 #include <iostream>
 #include <string>
 #include "birdHouse.h"
+#include <time.h>
+#include <math.h>
 
 using namespace std;
 
 int main()
 {
+    //Seed random number generator with time
+    srand(time(NULL));
+
     //Welcome message
     cout << "Hello, welcome to the Hangman Game!" << endl;
 

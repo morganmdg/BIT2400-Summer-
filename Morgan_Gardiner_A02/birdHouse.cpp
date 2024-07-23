@@ -8,6 +8,8 @@
 
 #include <fstream>
 #include <algorithm>
+#include <time.h>
+#include <math.h>
 
 using namespace std;
 
@@ -60,12 +62,17 @@ birdHouse::birdHouse(std::string filename)
     {
         cout << wordList[i] << endl;
     }
-
     cout << numWords;*/
 
     //Close the file
     birdfile.close();
 }
+
+string birdHouse::wordGenerator(string wordList)
+{
+
+}
+
 //Destructor should free the memory allocated to wordList and set all other values to 0
 birdHouse::~birdHouse(){
         delete[]wordList;

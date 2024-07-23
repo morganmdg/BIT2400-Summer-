@@ -11,6 +11,7 @@ class birdHouse {
 public:
     birdHouse (std::string Filename); //Constructor should open the file and set the wordList
     ~birdHouse();
+    std::string wordGenerator(std::string wordList);
     std::string userGuess; //String to store the user guesses Initalize to dashes
 private:
     std::string* wordList; //list of words read from the file
