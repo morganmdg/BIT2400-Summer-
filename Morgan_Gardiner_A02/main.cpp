@@ -11,7 +11,7 @@ int main()
 {
 
     //Welcome message
-    cout << "Hello, welcome to the Hangman Game!" << endl;
+    cout << "Welcome to the Hangman Game!" << endl;
 
     //Create string for user input and file extension
     string inputStr;
@@ -31,8 +31,14 @@ int main()
     string randomWord = startbirdHouse.wordGenerator();
     cout << "Your random word is: " << randomWord << endl;
 
+    //Random length test
     int randwordLength = startbirdHouse.lengthGenerator(randomWord);
     cout << "Length of random word: " << randwordLength <<endl;
+
+    cout << "The game will randomly generate a word and prove you with the length of that word." << endl;
+    cout << "You have eight incorrect guesses before you lose the game" << endl;
+    cout << "Enter your guesses below: " << endl;
+
 
 
 }

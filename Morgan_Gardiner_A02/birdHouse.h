@@ -14,6 +14,7 @@ public:
     std::string wordGenerator();
     int lengthGenerator(std::string randomWord);
     std::string userGuess; //String to store the user guesses Initalize to dashes
+    void userGuesses();
 private:
     std::string* wordList; //list of words read from the file
     std::string randomWord; //A random word from the list

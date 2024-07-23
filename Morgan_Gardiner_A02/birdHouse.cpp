@@ -88,6 +88,15 @@ int birdHouse::lengthGenerator(string randomWord)
     return wordLength;
 }
 
+void userGuesses()
+{
+    int i = 0;
+    for(i=0; i<8; i++)
+    {
+
+    }
+}
+
 
 //Destructor should free the memory allocated to wordList and set all other values to 0
 birdHouse::~birdHouse(){
