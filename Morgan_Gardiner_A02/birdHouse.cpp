@@ -41,7 +41,7 @@ birdHouse::birdHouse(std::string filename)
     string readWords[100];
 
     //Read/count words from file and input into readWords array
-    int NumWords = 0;
+    NumWords = 0;
     while(NumWords< 100 && (getline(birdfile, readWords[NumWords]))) {
         cout << readWords[NumWords] << endl;
         NumWords++;
@@ -51,7 +51,7 @@ birdHouse::birdHouse(std::string filename)
     cout << "Number of words read from the file: " << NumWords << endl;
 
     //Create string array and allocate correct number of words read from file into array
-    string* wordList = new string[NumWords];
+    wordList = new string[NumWords];
 
     //Copy words from the temporary string array readWords into wordList array
     copy(readWords,readWords+NumWords, wordList);

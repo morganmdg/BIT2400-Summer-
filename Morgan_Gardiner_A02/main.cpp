@@ -31,9 +31,8 @@ int main()
     string randomWord = startbirdHouse.wordGenerator();
     cout << "Your random word is: " << randomWord << endl;
 
-
     int randwordLength = startbirdHouse.lengthGenerator(randomWord);
-    cout << "Length of random word: " << randwordLength;
+    cout << "Length of random word: " << randwordLength <<endl;
 
 
 }
