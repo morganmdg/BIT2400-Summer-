@@ -21,9 +21,8 @@ birdHouse::birdHouse(std::string filename)
     //Output filepath + filename for confirmation
     cout << "Confirming you will be reading the following file: " << namepathStr << endl;
 
-
     //Create a local string array with 100 elements
-    string* wordList = new string[100];
+    string localWordList[100];
 
     //Creating an object of ifstream
     ifstream birdfile;
@@ -41,12 +40,14 @@ birdHouse::birdHouse(std::string filename)
     //Read and output text
     while(!birdfile.eof())
     {
-        int i=0;
+        int i;
         for (i =0; i<100; i++)
         {
-            getline(birdfile, wordList[i]);
-            cout << wordList[i] << endl;
-            cout << i << endl;
+            getline(birdfile, localWordList[i]);
+            cout << localWordList[i] << endl;
+            int getArrayLength = sizeof(localWordList) / sizeof(string);
+            cout << getArrayLength;
+
         }
     }
 
