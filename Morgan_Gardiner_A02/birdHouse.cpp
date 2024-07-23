@@ -48,9 +48,12 @@ birdHouse::birdHouse(std::string filename)
     cout << "Number of words read from the file: " << numWords << endl;
 
     //Create string array and allocate number of words from file
-    wordList = new string [numWords];
+    string* wordList = new string[numWords];
 
     //Copy words from the temporary string array to wordList
+    copy(readWords,readWords+numWords, wordList);
+
+    //Test if copying to wordlist worked
 
     //Close the file
     birdfile.close();
