@@ -44,7 +44,7 @@ birdHouse::birdHouse(std::string filename)
         int i=0;
         for (i =0; i<100; i++)
         {
-            getline(birdfile, string[i]);
+            getline(birdfile, wordList[i]);
             cout << wordList << endl;
         }
     }
