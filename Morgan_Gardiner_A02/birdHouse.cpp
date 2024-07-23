@@ -7,6 +7,7 @@
 #include "birdHouse.h"
 
 #include <fstream>
+#include <algorithm>
 
 using namespace std;
 
@@ -35,17 +36,21 @@ birdHouse::birdHouse(std::string filename)
     }
 
     //Read and count words from file
-    string readWords;
+    string readWords[100];
     int numWords = 0;
-
-    while(getline(birdfile, readWords)) {
-        cout << readWords << endl;
+    int i;
+    while(getline(birdfile, readWords[i])) {
+        cout << readWords[i] << endl;
         numWords++;
-        cout << numWords << endl;
     }
 
-    //Create a local string array with 100 elements
-    string localWordList[100];
+    //Print number of words read from the file for test
+    cout << "Number of words read from the file: " << numWords << endl;
+
+    //Create string array and allocate number of words from file
+    wordList = new string [numWords];
+
+    //Copy words from the temporary string array to wordList
 
     //Close the file
     birdfile.close();
