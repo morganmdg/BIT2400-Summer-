@@ -10,24 +10,47 @@
 
 using namespace std;
 
-birdHouse::birdHouse(std::string Filename)
+birdHouse::birdHouse(std::string filename)
 {
-    string wordList;  //string that will hold data read from file
-    ifstream birdfile;  //creating an object of ifstream
-    birdfile.open(Filename); //open file for reading
+    //Create string for filepath
+    string filepathStr = "./";
 
-    if (!birdfile.is_open()) //check if file was opened with no errors
+    //Concatenate filepath + filename
+    string namepathStr = filepathStr + filename;
+
+    //Output filepath + filename for confirmation
+    cout << "Confirming you will be reading the following file: " << namepathStr << endl;
+
+    //String wordList to hold data read from file
+    string wordList;
+
+    //Creating an object of ifstream
+    ifstream birdfile;
+
+    //Open file for reading
+    birdfile.open(namepathStr);
+
+    //Check if file was opened without errors
+    if (!birdfile.is_open())
     {
-      cout << "Error opening file";
+        cout << "Error opening file";
         exit(1);
     }
 
+    //Getline of text from file and output text
     while(!birdfile.eof())
     {
-        getline(birdfile, wordList);  //get line of text from the file
-        cout << wordList << endl; //output line of text that was read
+        getline(birdfile, wordList);
+        cout << wordList << endl;
     }
 
-    birdfile.close(); //close the file
+    //Close the file
+    birdfile.close();
 
+}
+
+//Destructor
+birdHouse::~birdHouse()
+{
+//Add code later
 }
