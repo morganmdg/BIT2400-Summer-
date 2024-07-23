@@ -35,25 +35,33 @@ birdHouse::birdHouse(std::string filename)
         exit(1);
     }
 
-    //Read and count words from file
+    //Create local string array[100]
     string readWords[100];
+
+    //Read/count words from file and output
     int numWords = 0;
     int i;
-    while(getline(birdfile, readWords[i])) {
-        cout << readWords[i] << endl;
+    while(numWords< 100 && (getline(birdfile, readWords[numWords]))) {
+        cout << readWords[numWords] << endl;
         numWords++;
     }
 
-    //Print number of words read from the file for test
+    //Print total number of words read from the file
     cout << "Number of words read from the file: " << numWords << endl;
 
-    //Create string array and allocate number of words from file
+    //Create string array and allocate number of words read from file into array
     string* wordList = new string[numWords];
 
-    //Copy words from the temporary string array to wordList
+    //Copy words from the temporary string array to wordList array
     copy(readWords,readWords+numWords, wordList);
 
-    //Test if copying to wordlist worked
+    /*Test if copying to wordlist worked
+    for(i=0; i<numWords; i++)
+    {
+        cout << wordList[i] << endl;
+    }
+
+    cout << numWords;*/
 
     //Close the file
     birdfile.close();
@@ -61,6 +69,7 @@ birdHouse::birdHouse(std::string filename)
     //Destructor
     birdHouse::~birdHouse(){
         //Add code later
+
     }
 
 
