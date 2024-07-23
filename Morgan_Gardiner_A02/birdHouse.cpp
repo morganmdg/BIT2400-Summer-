@@ -38,7 +38,7 @@ birdHouse::birdHouse(std::string filename)
         exit(1);
     }
 
-    //Getline of text from file and output text
+    //Read and output text
     while(!birdfile.eof())
     {
         int i=0;
@@ -46,6 +46,7 @@ birdHouse::birdHouse(std::string filename)
         {
             getline(birdfile, wordList[i]);
             cout << wordList[i] << endl;
+            cout << i << endl;
         }
     }
 
