@@ -8,8 +8,8 @@
 
 #include <fstream>
 #include <algorithm>
-#include <time.h>
-#include <math.h>
+#include <ctime>
+#include <cmath>
 
 using namespace std;
 
@@ -40,43 +40,58 @@ birdHouse::birdHouse(std::string filename)
     //Create local string array[100]
     string readWords[100];
 
-    //Read/count words from file and output
-    int numWords = 0;
-    int i;
-    while(numWords< 100 && (getline(birdfile, readWords[numWords]))) {
-        cout << readWords[numWords] << endl;
-        numWords++;
+    //Read/count words from file and input into readWords array
+    int NumWords = 0;
+    while(NumWords< 100 && (getline(birdfile, readWords[NumWords]))) {
+        cout << readWords[NumWords] << endl;
+        NumWords++;
     }
 
-    //Print total number of words read from the file
-    cout << "Number of words read from the file: " << numWords << endl;
+    //Test to print total number of words read from the file
+    cout << "Number of words read from the file: " << NumWords << endl;
 
-    //Create string array and allocate number of words read from file into array
-    string* wordList = new string[numWords];
+    //Create string array and allocate correct number of words read from file into array
+    string* wordList = new string[NumWords];
 
-    //Copy words from the temporary string array to wordList array
-    copy(readWords,readWords+numWords, wordList);
+    //Copy words from the temporary string array readWords into wordList array
+    copy(readWords,readWords+NumWords, wordList);
 
     /*Test if copying to wordlist worked
     for(i=0; i<numWords; i++)
     {
         cout << wordList[i] << endl;
     }
+    //Test output number of words
     cout << numWords;*/
 
     //Close the file
     birdfile.close();
 }
 
-string birdHouse::wordGenerator(string wordList)
+string birdHouse::wordGenerator()
 {
+    //Seed random number generator with time
+    srand(time(nullptr));
+    int i = rand() % NumWords;
+    string randomWord = wordList[i];
 
+    //Test output random word
+    cout << randomWord;
+
+   return randomWord;
 }
+
+int birdHouse::lengthGenerator(string randomWord)
+{
+    //Determine word length and set variable
+    int wordLength = randomWord.length();
+    return wordLength;
+}
+
 
 //Destructor should free the memory allocated to wordList and set all other values to 0
 birdHouse::~birdHouse(){
         delete[]wordList;
-        int numWords = 0;
     }
 
 

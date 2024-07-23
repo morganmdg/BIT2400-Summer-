@@ -9,8 +9,6 @@ using namespace std;
 
 int main()
 {
-    //Seed random number generator with time
-    srand(time(NULL));
 
     //Welcome message
     cout << "Hello, welcome to the Hangman Game!" << endl;
@@ -29,7 +27,13 @@ int main()
     //Execute opening/reading file
     birdHouse startbirdHouse(filename);
 
+    //Random word test
+    string randomWord = startbirdHouse.wordGenerator();
+    cout << "Your random word is: " << randomWord << endl;
 
+
+    int randwordLength = startbirdHouse.lengthGenerator(randomWord);
+    cout << "Length of random word: " << randwordLength;
 
 
 }
