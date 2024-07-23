@@ -66,10 +66,10 @@ birdHouse::birdHouse(std::string filename)
     //Close the file
     birdfile.close();
 }
-    //Destructor
-    birdHouse::~birdHouse(){
-        //Add code later
-
+//Destructor should free the memory allocated to wordList and set all other values to 0
+birdHouse::~birdHouse(){
+        delete[]wordList;
+        int numWords = 0;
     }
 
 
