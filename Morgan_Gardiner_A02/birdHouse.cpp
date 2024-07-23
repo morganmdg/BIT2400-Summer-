@@ -47,8 +47,8 @@ birdHouse::birdHouse(std::string filename)
         NumWords++;
     }
 
-    //Test to print total number of words read from the file
-    cout << "Number of words read from the file: " << NumWords << endl;
+    /*Test to print total number of words read from the file
+    cout << "Number of words read from the file: " << NumWords << endl;*/
 
     //Create string array and allocate correct number of words read from file into array
     wordList = new string[NumWords];
@@ -75,8 +75,8 @@ string birdHouse::wordGenerator()
     int i = rand() % NumWords;
     string randomWord = wordList[i];
 
-    //Test output random word
-    cout << randomWord;
+    /*Test output random word
+    cout << randomWord;*/
 
    return randomWord;
 }
@@ -91,8 +91,10 @@ int birdHouse::lengthGenerator(string randomWord)
 void userGuesses()
 {
     int i = 0;
+
     for(i=0; i<8; i++)
     {
+
 
     }
 }

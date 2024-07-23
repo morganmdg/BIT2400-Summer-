@@ -29,15 +29,16 @@ int main()
 
     //Random word test
     string randomWord = startbirdHouse.wordGenerator();
-    cout << "Your random word is: " << randomWord << endl;
+    //cout << "Your random word is: " << randomWord << endl;
+
+    cout << "The game will randomly generate a word and provide you with the length of that word" << endl;
+    cout << "You have eight guesses to guess all of the letters from the word" << endl;
+    cout << "Each incorrect guess will generate sections of the birdsnest" << endl;
 
     //Random length test
     int randwordLength = startbirdHouse.lengthGenerator(randomWord);
-    cout << "Length of random word: " << randwordLength <<endl;
-
-    cout << "The game will randomly generate a word and prove you with the length of that word." << endl;
-    cout << "You have eight incorrect guesses before you lose the game" << endl;
-    cout << "Enter your guesses below: " << endl;
+    cout << "The length of your random word is: " << randwordLength <<endl;
+    cout << "Enter your first letter below: " << endl;
 
 
 
