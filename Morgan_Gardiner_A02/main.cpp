@@ -44,25 +44,29 @@ int main()
     string userGuess (randwordLength, '-');
     cout << userGuess;
 
-    //Prompt user input
-    cout << "Enter your first letter below: " << endl;
-    char uInput;
-    cin >> uInput;
-
-    //Find the letter in the string
-    int position = randomWord.find(uInput);
 
     //If position not null return position of letter or prompt user to try again
-    if(position >= NULL )
+    int i;
+    for(i=0; i<8; i++)
     {
-        cout << "Your letter was located at position " << position <<endl;
-        userGuess[position] = uInput;
-        cout << userGuess;
-        cout << "Yay!";
-    }
-   else
-   {
-       cout << "Uh oh. Try again";
-   }
+        //Prompt user input
+        cout << "Enter a letter below: " << endl;
+        char uInput;
+        cin >> uInput;
 
+        //Find the letter in the string
+        int position = randomWord.find(uInput);
+
+        if(position >= NULL )
+        {
+            cout << "Your letter was located at position " << position <<endl;
+            userGuess[position] = uInput;
+            cout << userGuess << endl;
+            cout << "Yay! You got a word. Guess again :)" << endl;;
+        }
+        else
+        {
+            cout << "Uh oh. Try again" << endl;
+        }
+    }
 }
