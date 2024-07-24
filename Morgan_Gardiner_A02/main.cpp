@@ -40,6 +40,12 @@ int main()
     cout << "The length of your random word is: " << randwordLength <<endl;
     cout << "Enter your first letter below: " << endl;
 
+    //Initalize userGuess to - depending on length of random word
+    string userGuess (randwordLength, '-');
+    cout << userGuess;
 
+    char uInput;
+
+    cin >> uInput;
 
 }
