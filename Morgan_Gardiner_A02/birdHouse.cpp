@@ -90,28 +90,7 @@ int birdHouse::lengthGenerator(string randomWord)
 
 void userGuesses()
 {
-
-
-    /*string userGuess (wordLength, '-');
-
-
-   int position = randomWord.find(userGuess);
-
-    int i = 0;
-    for(i=0; i<8; i++)
-    {
-        cin >> userGuess;
-
-        if (userGuess == randomWord[i])
-        {
-            cout << "Yay you correctly guessed the letter " << userGuess << end;
-
-        }
-        else
-        {
-            cout << "Woops wrong guess. Better try again. ___ more chances " << endl;
-        }
-    }*/
+    //Input code
 }
 
 

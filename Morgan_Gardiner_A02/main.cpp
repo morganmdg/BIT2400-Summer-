@@ -57,6 +57,7 @@ int main()
         //Find the letter in the string
         int position = randomWord.find(uInput);
 
+        //Loop to check if guessed word is found at _ position
         if(position >= NULL )
         {
             cout << "Your letter was located at position " << position <<endl;
