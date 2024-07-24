@@ -29,7 +29,7 @@ int main()
 
     //Random word test
     string randomWord = startbirdHouse.wordGenerator();
-    //cout << "Your random word is: " << randomWord << endl;
+    cout << "Your random word is: " << randomWord << endl;
 
     cout << "The game will randomly generate a word and provide you with the length of that word" << endl;
     cout << "You have eight guesses to guess all of the letters from the word" << endl;
@@ -49,11 +49,15 @@ int main()
     char uInput;
     cin >> uInput;
 
+    //Find the letter in the string
     int position = randomWord.find(uInput);
 
-    if(position != NULL )
+    //If position not null return position of letter or prompt user to try again
+    if(position >= NULL )
     {
         cout << "Your letter was located at position " << position <<endl;
+        userGuess[position] = uInput;
+        cout << userGuess;
         cout << "Yay!";
     }
    else
