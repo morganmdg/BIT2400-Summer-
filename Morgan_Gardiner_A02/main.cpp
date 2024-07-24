@@ -38,14 +38,27 @@ int main()
     //Random length test
     int randwordLength = startbirdHouse.lengthGenerator(randomWord);
     cout << "The length of your random word is: " << randwordLength <<endl;
-    cout << "Enter your first letter below: " << endl;
+
 
     //Initalize userGuess to - depending on length of random word
     string userGuess (randwordLength, '-');
     cout << userGuess;
 
+    //Prompt user input
+    cout << "Enter your first letter below: " << endl;
     char uInput;
-
     cin >> uInput;
+
+    int position = randomWord.find(uInput);
+
+    if(position != NULL )
+    {
+        cout << "Your letter was located at position " << position <<endl;
+        cout << "Yay!";
+    }
+   else
+   {
+       cout << "Uh oh. Try again";
+   }
 
 }
