@@ -46,8 +46,12 @@ int main()
 
 
     //If position not null return position of letter or prompt user to try again
-    int i;
-    for(i=0; i<8; i++)
+
+    //How many guesses the user has left
+    int leftoverGuesses = 8;
+
+    //Loop through while user still has guesses leftover
+    while (leftoverGuesses > 8 && userGuess != randomWord)
     {
         //Prompt user input
         cout << "Enter a letter below: " << endl;
