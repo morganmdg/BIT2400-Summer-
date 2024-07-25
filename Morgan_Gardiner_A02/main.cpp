@@ -51,7 +51,7 @@ int main()
     int leftoverGuesses = 8;
 
     //Loop through while user still has guesses leftover
-    while (leftoverGuesses > 8 && userGuess != randomWord)
+    while (leftoverGuesses > 0 && userGuess != randomWord)
     {
         //Prompt user input
         cout << "Enter a letter below: " << endl;
