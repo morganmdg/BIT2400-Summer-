@@ -1,7 +1,6 @@
 //
 // Created by morga on 2024-07-21.
 //
-
 #include <iostream>
 #include <string>
 #include "birdHouse.h"
@@ -173,7 +172,7 @@ void birdHouse::wordGuess()
 {
     //Ask user after each guess if they would like to guess the whole word
     cout << "Would you like to try guessing the word? 1 = YES, 0 = NO " <<endl;
-    int ynInput;
+    bool ynInput;
     cin >> ynInput;
 
     if (ynInput == 1)
