@@ -139,8 +139,7 @@ void birdHouse::birdHouseGame()
                 cout << "Uh oh. Your letter was not found. Try again" << endl;
                 numGuess --;
                 wrongGuess++;
-
-                //Call print birdHouse
+                printbirdHouse(wrongGuess);
             }
 
             wordGuess();
@@ -188,7 +187,7 @@ void birdHouse::wordGuess()
     }
 }
 
-void birdHouse::printbirdHouse()
+int birdHouse::printbirdHouse(int iwrongGuess)
 {
 //Print out part of birdhouse each wrong guess
     switch(wrongGuess)
@@ -266,6 +265,7 @@ void birdHouse::printbirdHouse()
         cout << "    GAME OVER   " << endl;
         break;
     }
+    return 0;
 }
 
 

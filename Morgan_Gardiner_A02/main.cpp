@@ -36,8 +36,6 @@ int main()
     //Start birdHouse game
     startbirdHouse.birdHouseGame();
 
-    //Test print birdHouse
-    startbirdHouse.printbirdHouse();
 
     return 0;
 }

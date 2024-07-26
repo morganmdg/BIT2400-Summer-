@@ -16,7 +16,7 @@ public:
     int lengthGenerator(std::string randomWord);
     void birdHouseGame();
     void wordGuess();
-    void printbirdHouse();
+    int printbirdHouse(int wrongGuess);
     std::string userGuess; //String to store the user guesses Initalize to dashes
     char ynInput;
 private:
