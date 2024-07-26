@@ -194,20 +194,35 @@ void birdHouse::printbirdHouse()
     switch(wrongGuess)
     {
     case 1:
+        cout << " | " << endl;
+        cout << " | " << endl;
         break;
     case 2:
+        cout << R"( \ )" << endl;
+        cout << R"(  \ )" << endl;
+        cout << R"(   \ )" << endl;
         break;
     case 3:
+        cout << R"(    / )" << endl;
+        cout << R"(  / )" << endl;
+        cout << R"( /  )" << endl;
         break;
     case 4:
+        cout << " ---------- " << endl;
         break;
     case 5:
+        cout << " < " << endl;
+        cout << " < " << endl;
         break;
     case 6:
+        cout << " > " << endl;
+        cout << " > " << endl;
         break;
     case 7:
+        cout << "     0     " << endl;
         break;
     case 8:
+        cout << " ---------- " << endl;
         break;
     }
 }
