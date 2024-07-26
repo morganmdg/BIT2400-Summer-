@@ -9,7 +9,6 @@ using namespace std;
 
 int main()
 {
-
     //Welcome message
     cout << "Welcome to the Hangman Game!" << endl;
 
@@ -42,7 +41,7 @@ int main()
 
     //Initalize userGuess to - depending on length of random word
     string userGuess (randwordLength, '-');
-    cout << userGuess;
+    cout << userGuess << endl;
 
 
     //If position not null return position of letter or prompt user to try again
@@ -58,51 +57,58 @@ int main()
         char uInput;
         cin >> uInput;
 
-        //Find the letter in the string
-        int position = randomWord.find(uInput, position + 1);
+        //Loop to check if guessed word is found in the random word string
+        int position = randomWord.find(uInput);
 
-        int ynInput;
-        char guessInput;
-
-        //Loop to check if guessed word is found at _ position
-        if(position >= NULL)
+        if(position >= 0)
         {
-            cout << "Your letter was located at position " << position <<endl;
-            userGuess[position] = uInput;
-            cout << userGuess << endl;
-            cout << "Yay! You guessed a letter correctly" << endl;;
-            cout << "Would you like to try guessing the word? Enter 1 for yes and 0 for no " <<endl;
-            cin >> ynInput >> endl;
+            bool update = false;
+            while (position >= 0)
+            {
+                userGuess[position] = uInput;
+                position = randomWord.find(uInput, position + 1);
+                update = true;
+            }
+            if (update == true) {
+                cout << userGuess << endl;
+                cout << "Yay! You guessed a letter correctly" << endl;;
+
+                //Ask user after each guess if they would like to guess the whole word
+                cout << "Would you like to try guessing the word? Enter 1 for yes and 0 for no " <<endl;
+                int ynInput;
+                cin >> ynInput;
+
+                if (ynInput == 1)
+                {
+                    cout << "Okay. Please guess the full word below: "<< endl;
+                    string guessInput;
+                    cin >> guessInput;
+
+                    if (guessInput == randomWord)
+                    {
+                        cout << "Wow. You guessed the word! Congratulations. You win :)" <<endl;
+                        return 0;
+                    }
+                    else
+                    {
+                        cout << "Oh no. Your guess was not a match. You lose. "<< endl;
+                        cout << "GAME OVER" << endl;
+                        return 0;
+                    }
+                }
+            }
         }
         else
         {
-            cout << "Uh oh. Wrong Guess. Try again" << endl;
+            cout << "Uh oh. Your letter was not found. Try again" << endl;
             numGuess --;
         }
+
+        if (numGuess == 0)
+        {
+            cout << "Oh no!! You're out of guesses :(" << endl;
+            cout << "You lose" << endl;
+        }
     }
-
-    if (numGuess == 0)
-    {
-        cout << "Oh no!! You're out of chances :(" << endl;
-        cout << "You lose" << endl;
-    }
-
-    int ynInput;
-    char guessInput;
-
-
-    cout << "Okay. Please enter the word you think below: "<< endl;
-    cin << guessInput;
-    if (guessInput == randomWord)
-    {
-        cout << "Wow. You guessed the word! Congratulations. You win :)" <<endl;
-    }
-    else
-    {
-        cout << "Oh no. Your guess was not a match. You lose. "<< endl;
-        cout << "GAME OVER" << endl;
-        exit(0);
-    }
-
-
 }
+
