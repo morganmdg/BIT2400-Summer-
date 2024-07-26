@@ -190,7 +190,7 @@ void birdHouse::wordGuess()
 
 void birdHouse::printbirdHouse()
 {
-//Add switch case
+//Print out part of birdhouse each wrong guess
     switch(wrongGuess)
     {
     case 1:
@@ -203,26 +203,67 @@ void birdHouse::printbirdHouse()
         cout << R"(   \ )" << endl;
         break;
     case 3:
-        cout << R"(    / )" << endl;
-        cout << R"(  / )" << endl;
-        cout << R"( /  )" << endl;
+        cout << "        |    " << endl;
+        cout << "        |    " << endl;
+        cout << R"(     / \   )" << endl;
+        cout << R"(    /   \)" << endl;
+        cout << R"(   /     \)" << endl;
+        cout << R"(  /       \)" << endl;
         break;
     case 4:
-        cout << " ---------- " << endl;
+        cout << "        |    " << endl;
+        cout << "        |    " << endl;
+        cout << R"(     / \   )" << endl;
+        cout << R"(    /   \)" << endl;
+        cout << R"(   /     \)" << endl;
+        cout << R"(  /       \)" << endl;
+        cout << "   ----------- " << endl;
         break;
     case 5:
-        cout << " < " << endl;
-        cout << " < " << endl;
+        cout << "        |    " << endl;
+        cout << "        |    " << endl;
+        cout << R"(     / \   )" << endl;
+        cout << R"(    /   \)" << endl;
+        cout << R"(   /     \)" << endl;
+        cout << R"(  /       \)" << endl;
+        cout << "   ----------- " << endl;
+        cout << "  <    " << endl;
+        cout << "  <     " << endl;
         break;
     case 6:
-        cout << " > " << endl;
-        cout << " > " << endl;
+        cout << "        |    " << endl;
+        cout << "        |    " << endl;
+        cout << R"(     / \   )" << endl;
+        cout << R"(    /   \)" << endl;
+        cout << R"(   /     \)" << endl;
+        cout << R"(  /       \)" << endl;
+        cout << "   ----------- " << endl;
+        cout << "  <           > " << endl;
+        cout << "  <           > " << endl;
         break;
     case 7:
-        cout << "     0     " << endl;
+        cout << "        |    " << endl;
+        cout << "        |    " << endl;
+        cout << R"(     / \   )" << endl;
+        cout << R"(    /   \)" << endl;
+        cout << R"(   /     \)" << endl;
+        cout << R"(  /       \)" << endl;
+        cout << "   ----------- " << endl;
+        cout << "  <           > " << endl;
+        cout << "  <     0     > " << endl;
         break;
     case 8:
-        cout << " ---------- " << endl;
+        cout << "        |    " << endl;
+        cout << "        |    " << endl;
+        cout << R"(     / \   )" << endl;
+        cout << R"(    /   \)" << endl;
+        cout << R"(   /     \)" << endl;
+        cout << R"(  /       \)" << endl;
+        cout << "   ----------- " << endl;
+        cout << "  <           > " << endl;
+        cout << "  <     0     > " << endl;
+        cout << "   ---------- " << endl;
+        cout << "    GAME OVER   " << endl;
         break;
     }
 }
