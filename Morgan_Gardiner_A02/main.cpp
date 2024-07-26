@@ -28,26 +28,24 @@ int main()
 
     //Random word test
     string randomWord = startbirdHouse.wordGenerator();
+    //Comment out after
     cout << "Your random word is: " << randomWord << endl;
 
-    cout << "The game will randomly generate a word and provide you with the length of that word" << endl;
-    cout << "You have eight guesses to guess all of the letters from the word" << endl;
-    cout << "Each incorrect guess will generate sections of the birdsnest" << endl;
+    startbirdHouse.birdHouseInstructions();
 
     //Random length test
     int randwordLength = startbirdHouse.lengthGenerator(randomWord);
     cout << "The length of your random word is: " << randwordLength <<endl;
 
-
     //Initalize userGuess to - depending on length of random word
     string userGuess (randwordLength, '-');
     cout << userGuess << endl;
 
-
-    //If position not null return position of letter or prompt user to try again
-
-    //How many guesses the user has left
+    //Remaining user guesses
     int numGuess = 8;
+
+    //Number of wrong user guesses
+    int wrongGuess = 0;
 
     //Loop through while user still has guesses leftover
     while (numGuess > 0 && userGuess != randomWord)
@@ -57,7 +55,7 @@ int main()
         char uInput;
         cin >> uInput;
 
-        //Loop to check if guessed word is found in the random word string
+        //Loop to check if guessed word is found in the random word string using find
         int position = randomWord.find(uInput);
 
         if(position >= 0)
@@ -72,43 +70,32 @@ int main()
             if (update == true) {
                 cout << userGuess << endl;
                 cout << "Yay! You guessed a letter correctly" << endl;;
+            }
+            else
+            {
+                cout << "Uh oh. Your letter was not found. Try again" << endl;
+                numGuess --;
+                wrongGuess++;
 
-                //Ask user after each guess if they would like to guess the whole word
-                cout << "Would you like to try guessing the word? Enter 1 for yes and 0 for no " <<endl;
-                int ynInput;
-                cin >> ynInput;
+                //Add switch case for birdsnest
+            }
 
-                if (ynInput == 1)
-                {
-                    cout << "Okay. Please guess the full word below: "<< endl;
-                    string guessInput;
-                    cin >> guessInput;
+            startbirdHouse.wordGuess();
 
-                    if (guessInput == randomWord)
-                    {
-                        cout << "Wow. You guessed the word! Congratulations. You win :)" <<endl;
-                        return 0;
-                    }
-                    else
-                    {
-                        cout << "Oh no. Your guess was not a match. You lose. "<< endl;
-                        cout << "GAME OVER" << endl;
-                        return 0;
-                    }
-                }
+            if (userGuess == randomWord)
+            {
+                cout << "Congrats you guessed the word: " << randomWord << endl;
+                return 0;
+            }
+            if (numGuess == 0)
+            {
+                cout << "Oh no!! You're out of guesses :(" << endl;
+                cout << "You lose" << endl;
+                return 0;
             }
         }
-        else
-        {
-            cout << "Uh oh. Your letter was not found. Try again" << endl;
-            numGuess --;
-        }
 
-        if (numGuess == 0)
-        {
-            cout << "Oh no!! You're out of guesses :(" << endl;
-            cout << "You lose" << endl;
-        }
     }
+    return 0;
 }
 

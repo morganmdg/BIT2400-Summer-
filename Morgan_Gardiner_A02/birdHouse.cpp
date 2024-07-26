@@ -68,6 +68,15 @@ birdHouse::birdHouse(std::string filename)
     birdfile.close();
 }
 
+void birdHouseInstructions()
+{
+    //Instructions
+    cout << "The game will randomly generate a word and provide you with the length of that word" << endl;
+    cout << "You have eight guesses to guess the letters of the word" << endl;
+    cout << "Each incorrect guess will generate sections of the birdsnest" << endl;
+    cout << "Once the full birdsnest appears you lose " << endl;
+}
+
 string birdHouse::wordGenerator()
 {
     //Seed random number generator with time
@@ -88,9 +97,31 @@ int birdHouse::lengthGenerator(string randomWord)
     return wordLength;
 }
 
-void userGuesses()
+void wordGuess()
 {
-    //Input code
+    //Ask user after each guess if they would like to guess the whole word
+    cout << "Would you like to try guessing the word? Enter 1 for yes and 0 for no " <<endl;
+    int ynInput;
+    cin >> ynInput;
+
+    if (ynInput == 1)
+    {
+        cout << "Okay. Please guess the full word below: "<< endl;
+        string guessInput;
+        cin >> guessInput;
+
+        if (guessInput == randomWord)
+        {
+            cout << "Wow. You guessed the word! Congratulations. You win :)" <<endl;
+            exit(0);
+        }
+        else
+        {
+            cout << "Oh no. Your guess was not a match. You lose. "<< endl;
+            cout << "GAME OVER" << endl;
+           exit(0);
+        }
+    }
 }
 
 
