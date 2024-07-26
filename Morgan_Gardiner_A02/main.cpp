@@ -48,10 +48,10 @@ int main()
     //If position not null return position of letter or prompt user to try again
 
     //How many guesses the user has left
-    int leftoverGuesses = 8;
+    int numGuess = 8;
 
     //Loop through while user still has guesses leftover
-    while (leftoverGuesses > 0 && userGuess != randomWord)
+    while (numGuess > 0 && userGuess != randomWord)
     {
         //Prompt user input
         cout << "Enter a letter below: " << endl;
@@ -61,24 +61,48 @@ int main()
         //Find the letter in the string
         int position = randomWord.find(uInput, position + 1);
 
+        int ynInput;
+        char guessInput;
+
         //Loop to check if guessed word is found at _ position
         if(position >= NULL)
         {
             cout << "Your letter was located at position " << position <<endl;
             userGuess[position] = uInput;
             cout << userGuess << endl;
-            cout << "Yay! You got a word. Guess again :)" << endl;;
+            cout << "Yay! You guessed a letter correctly" << endl;;
+            cout << "Would you like to try guessing the word? Enter 1 for yes and 0 for no " <<endl;
+            cin >> ynInput >> endl;
         }
         else
         {
-            cout << "Uh oh. Try again" << endl;
-            leftoverGuesses --;
+            cout << "Uh oh. Wrong Guess. Try again" << endl;
+            numGuess --;
         }
     }
 
-    if (leftoverGuesses == 0)
+    if (numGuess == 0)
     {
-        cout << "Uh oh you're out of chances" << endl;
+        cout << "Oh no!! You're out of chances :(" << endl;
         cout << "You lose" << endl;
     }
+
+    int ynInput;
+    char guessInput;
+
+
+    cout << "Okay. Please enter the word you think below: "<< endl;
+    cin << guessInput;
+    if (guessInput == randomWord)
+    {
+        cout << "Wow. You guessed the word! Congratulations. You win :)" <<endl;
+    }
+    else
+    {
+        cout << "Oh no. Your guess was not a match. You lose. "<< endl;
+        cout << "GAME OVER" << endl;
+        exit(0);
+    }
+
+
 }
