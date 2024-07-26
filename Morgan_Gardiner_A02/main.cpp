@@ -2,15 +2,13 @@
 #include <iostream>
 #include <string>
 #include "birdHouse.h"
-#include <time.h>
-#include <math.h>
 
 using namespace std;
 
 int main()
 {
     //Welcome message
-    cout << "Welcome to the Hangman Game!" << endl;
+    cout << "Welcome to the 'Bird House' Hangman Game!" << endl;
 
     //Create string for user input and file extension
     string inputStr;
@@ -35,7 +33,6 @@ int main()
 
     //Start birdHouse game
     startbirdHouse.birdHouseGame();
-
 
     return 0;
 }

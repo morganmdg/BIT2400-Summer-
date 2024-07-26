@@ -5,7 +5,6 @@
 #include <iostream>
 #include <string>
 #include "birdHouse.h"
-
 #include <fstream>
 #include <algorithm>
 #include <ctime>
@@ -67,12 +66,13 @@ birdHouse::birdHouse(std::string filename)
     //Close the file
     birdfile.close();
 
+    //Initialise randomWord variable
     randomWord = wordGenerator();
 }
 
 void birdHouse::birdHouseInstructions()
 {
-    //Instructions
+    //Game Instructions
     cout << "The game will randomly generate a word and provide you with the length of that word" << endl;
     cout << "You have eight guesses to guess the letters of the word" << endl;
     cout << "Each incorrect guess will generate sections of the birdsnest" << endl;
@@ -100,14 +100,14 @@ void birdHouse::birdHouseGame()
     int randwordLength = lengthGenerator(randomWord);
     cout << "The length of your random word is: " << randwordLength <<endl;
 
-    //Initalize userGuess to - depending on length of random word
+    //Initalize userGuess to '-' and depending on length of random word
     string userGuess (randwordLength, '-');
     cout << userGuess << endl;
 
-    //Remaining user guesses
+    //Initalise variable to keep track of remaining user guesses
     int numGuess = 8;
 
-    //Number of wrong user guesses
+    //Initalise variable to keep track of number of wrong user guesses
     int wrongGuess = 0;
 
     //Loop through while user still has guesses leftover
@@ -118,37 +118,46 @@ void birdHouse::birdHouseGame()
         char uInput;
         cin >> uInput;
 
-        //Loop to check if guessed word is found in the random word string using find
+        //Loop to check if guessed letter is found in the random word string using find
         int position = randomWord.find(uInput);
 
-        if(position >= 0)
+        //Boolean operator for if letter is found
+        bool found = false;
+
+        //Loop through the string to see if user guessed letter is found
+        for (size_t i = 0; i < randomWord.length(); i++)
         {
-            bool update = false;
-            while (position >= 0)
-            {
-                userGuess[position] = uInput;
-                position = randomWord.find(uInput, position + 1);
-                update = true;
+            if (randomWord[i] == uInput) {
+
+                userGuess[i] = uInput;
+                found = true;
             }
-            if (update == true) {
+        }
+            if (found == true) {
                 cout << userGuess << endl;
                 cout << "Yay! You guessed a letter correctly" << endl;;
             }
             else
             {
                 cout << "Uh oh. Your letter was not found. Try again" << endl;
+                //Decrement number of user guesses and increment number of wrong user guesses
                 numGuess --;
                 wrongGuess++;
+                //Call method to print portion of bird house
                 printbirdHouse(wrongGuess);
             }
 
+            //Call word guess method
             wordGuess();
 
+            //Conditional statement for if userGuess is the same as random word
             if (userGuess == randomWord)
             {
                 cout << "Congrats you guessed the word: " << randomWord << endl;
                 exit(0);
             }
+
+            //Conditional statement for if user runs out of guesses
             if (numGuess == 0)
             {
                 cout << "Oh no!! You're out of guesses :(" << endl;
