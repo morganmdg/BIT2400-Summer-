@@ -104,34 +104,36 @@ void birdHouse::birdHouseGame()
     cout << userGuess << endl;
 
     //Initalise variable to keep track of remaining user guesses
-    int numGuess = 8;
+    numGuess = 8;
 
     //Initalise variable to keep track of number of wrong user guesses
-    int wrongGuess = 0;
+    wrongGuess = 0;
 
     //Loop through while user still has guesses leftover
     while (numGuess > 0 && userGuess != randomWord)
     {
         //Prompt user input
         cout << "Enter a letter below: " << endl;
-        char uInput;
+        uInput;
         cin >> uInput;
 
-        //Loop to check if guessed letter is found in the random word string using find
-        int position = randomWord.find(uInput);
-
         //Boolean operator for if letter is found
-        bool found = false;
+        found = false;
 
         //Loop through the string to see if user guessed letter is found
-        for (size_t i = 0; i < randomWord.length(); i++)
+        for (int i = 0; i < randomWord.size(); i++)
         {
             if (randomWord[i] == uInput) {
-
                 userGuess[i] = uInput;
                 found = true;
             }
         }
+
+        cout << "After Guess: " << uInput << endl;
+        cout << "User Guess " << userGuess << endl;
+        cout << "random word " << randomWord << endl;
+        cout << "found: " << found << endl;
+
             if (found == true) {
                 cout << userGuess << endl;
                 cout << "Yay! You guessed a letter correctly" << endl;;
@@ -153,7 +155,7 @@ void birdHouse::birdHouseGame()
             if (userGuess == randomWord)
             {
                 cout << "Congrats you guessed the word: " << randomWord << endl;
-                exit(0);
+                return;
             }
 
             //Conditional statement for if user runs out of guesses
@@ -161,7 +163,7 @@ void birdHouse::birdHouseGame()
             {
                 cout << "Oh no!! You're out of guesses :(" << endl;
                 cout << "You lose" << endl;
-               exit(0);
+               return;
             }
         }
 

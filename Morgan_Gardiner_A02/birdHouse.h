@@ -19,6 +19,7 @@ public:
     int printbirdHouse(int wrongGuess); //Method to print out parts of Bird House for each wrong answer
     std::string userGuess; //String to store the user guesses Initalize to dashes
     bool ynInput; //User input
+    bool found;
 private:
     std::string* wordList; //list of words read from the file
     std::string randomWord; //A random word from the list
