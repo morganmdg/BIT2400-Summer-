@@ -147,7 +147,7 @@ void birdHouse::birdHouseGame()
                 printbirdHouse(wrongGuess);
             }
 
-            //Call word guess method
+            //Call word guess method to see if user would like to take a chance to guess full word
             wordGuess();
 
             //Conditional statement for if userGuess is the same as random word
@@ -167,30 +167,42 @@ void birdHouse::birdHouseGame()
         }
 
     }
-}
+
 
 void birdHouse::wordGuess()
 {
     //Ask user after each guess if they would like to guess the whole word
-    cout << "Would you like to try guessing the word? Enter 1 for yes and 0 for no " <<endl;
+    cout << "Would you like to try guessing the word? 1 = YES, 0 = NO " <<endl;
     int ynInput;
     cin >> ynInput;
 
     if (ynInput == 1)
     {
-        cout << "Okay. Please guess the full word below: "<< endl;
+        cout << "Take a chance and guess the full word below: "<< endl;
         string guessInput;
         cin >> guessInput;
 
         if (guessInput == randomWord)
         {
-            cout << "Wow. You guessed the word! Congratulations. You win :)" <<endl;
+            cout << "Wow!!! You guessed the word! Congratulations." <<endl;
+            cout << "YOU WIN :)" << endl;
             exit(0);
         }
         else
         {
             cout << "Oh no. Your guess was not a match. You lose. "<< endl;
             cout << "GAME OVER" << endl;
+            cout << "        |    " << endl;
+            cout << "        |    " << endl;
+            cout << R"(     / \   )" << endl;
+            cout << R"(    /   \)" << endl;
+            cout << R"(   /     \)" << endl;
+            cout << R"(  /       \)" << endl;
+            cout << "   ----------- " << endl;
+            cout << "  <           > " << endl;
+            cout << "  <     0     > " << endl;
+            cout << "   ---------- " << endl;
+            cout << "   GAME OVER :(   " << endl;
            exit(0);
         }
     }
@@ -277,9 +289,8 @@ int birdHouse::printbirdHouse(int iwrongGuess)
     return 0;
 }
 
-
-//Destructor should free the memory allocated to wordList and set all other values to 0
 birdHouse::~birdHouse(){
+    //Free memory using delete[]
         delete[]wordList;
     }
 
