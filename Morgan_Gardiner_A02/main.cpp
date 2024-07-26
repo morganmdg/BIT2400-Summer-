@@ -59,10 +59,10 @@ int main()
         cin >> uInput;
 
         //Find the letter in the string
-        int position = randomWord.find(uInput);
+        int position = randomWord.find(uInput, position + 1);
 
         //Loop to check if guessed word is found at _ position
-        if(position >= NULL )
+        if(position >= NULL)
         {
             cout << "Your letter was located at position " << position <<endl;
             userGuess[position] = uInput;
@@ -72,6 +72,13 @@ int main()
         else
         {
             cout << "Uh oh. Try again" << endl;
+            leftoverGuesses --;
         }
+    }
+
+    if (leftoverGuesses == 0)
+    {
+        cout << "Uh oh you're out of chances" << endl;
+        cout << "You lose" << endl;
     }
 }
