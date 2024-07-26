@@ -26,76 +26,16 @@ int main()
     //Execute opening/reading file
     birdHouse startbirdHouse(filename);
 
-    //Random word test
+    //Test: Comment out after
     string randomWord = startbirdHouse.wordGenerator();
-    //Comment out after
     cout << "Your random word is: " << randomWord << endl;
 
+    //Print out birdhouse game instructions
     startbirdHouse.birdHouseInstructions();
 
-    //Random length test
-    int randwordLength = startbirdHouse.lengthGenerator(randomWord);
-    cout << "The length of your random word is: " << randwordLength <<endl;
+    //Start birdHouse game
+    startbirdHouse.birdHouseGame();
 
-    //Initalize userGuess to - depending on length of random word
-    string userGuess (randwordLength, '-');
-    cout << userGuess << endl;
-
-    //Remaining user guesses
-    int numGuess = 8;
-
-    //Number of wrong user guesses
-    int wrongGuess = 0;
-
-    //Loop through while user still has guesses leftover
-    while (numGuess > 0 && userGuess != randomWord)
-    {
-        //Prompt user input
-        cout << "Enter a letter below: " << endl;
-        char uInput;
-        cin >> uInput;
-
-        //Loop to check if guessed word is found in the random word string using find
-        int position = randomWord.find(uInput);
-
-        if(position >= 0)
-        {
-            bool update = false;
-            while (position >= 0)
-            {
-                userGuess[position] = uInput;
-                position = randomWord.find(uInput, position + 1);
-                update = true;
-            }
-            if (update == true) {
-                cout << userGuess << endl;
-                cout << "Yay! You guessed a letter correctly" << endl;;
-            }
-            else
-            {
-                cout << "Uh oh. Your letter was not found. Try again" << endl;
-                numGuess --;
-                wrongGuess++;
-
-                //Add switch case for birdsnest
-            }
-
-            startbirdHouse.wordGuess();
-
-            if (userGuess == randomWord)
-            {
-                cout << "Congrats you guessed the word: " << randomWord << endl;
-                return 0;
-            }
-            if (numGuess == 0)
-            {
-                cout << "Oh no!! You're out of guesses :(" << endl;
-                cout << "You lose" << endl;
-                return 0;
-            }
-        }
-
-    }
     return 0;
 }
 

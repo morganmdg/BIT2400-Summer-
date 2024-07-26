@@ -14,8 +14,10 @@ public:
     void birdHouseInstructions();
     std::string wordGenerator();
     int lengthGenerator(std::string randomWord);
-    std::string userGuess; //String to store the user guesses Initalize to dashes
+    void birdHouseGame();
     void wordGuess();
+    void printbirdHouse();
+    std::string userGuess; //String to store the user guesses Initalize to dashes
     char ynInput;
 private:
     std::string* wordList; //list of words read from the file
