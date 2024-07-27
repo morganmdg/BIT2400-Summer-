@@ -20,6 +20,7 @@ birdHouse::birdHouse(std::string filename)
     string namepathStr = filepathStr + filename;
 
     //Output filepath + filename for confirmation
+    cout << "\n";
     cout << "Confirming you will be reading the following file: " << namepathStr << endl;
 
     //Creating an object of ifstream
@@ -41,7 +42,8 @@ birdHouse::birdHouse(std::string filename)
     //Read/count words from file and input into readWords array
     NumWords = 0;
     while(NumWords< 100 && (getline(birdfile, readWords[NumWords]))) {
-        cout << readWords[NumWords] << endl;
+        //Test: read/output all words from the file
+       //cout << readWords[NumWords] << endl;
         NumWords++;
     }
 
@@ -88,10 +90,17 @@ birdHouse::birdHouse(std::string filename)
 void birdHouse::birdHouseInstructions()
 {
     //Game Instructions
-    cout << "The game will randomly generate a word and provide you with the length of that word" << endl;
-    cout << "You have eight guesses to guess the letters of the word" << endl;
-    cout << "Each incorrect guess will generate sections of the birdsnest" << endl;
-    cout << "Once the full birdsnest appears you lose " << endl;
+    cout <<endl;
+    cout << "********************************" << endl;
+    cout << "GAME INSTRUCTIONS: " << endl;
+    cout << "The game will generate a random word from the provided text file and output the number of letters in that word. " << endl;
+    cout << "Each turn you have a chance to guess a letter from that word." << endl;
+    cout << "Each incorrect guess will generate a part of the bird house. You have 8 chances." << endl;
+    cout << "Once the full bird house appears, you lose." << endl;
+    cout << "Each turn you will also have a chance to try and guess the full word." << endl;
+    cout << "If you guess the right word you win. If you get all of the letters of the random word you win." << endl;
+    cout << "GOOD LUCK!" << endl;
+    cout << "********************************" << endl;
 }
 
 string birdHouse::wordGenerator()
@@ -110,11 +119,13 @@ int birdHouse::lengthGenerator(const string& randomWord)
 
 void birdHouse::birdHouseGame()
 {
+    //Output
+    cout << endl;
     cout << "The length of your random word is: " << randwordLength <<endl;
 
     //Initalize userGuess to '-' and depending on length of random word
     string userGuess (randwordLength, '-');
-    cout << userGuess << endl;
+    cout << "Random word:" << userGuess << endl;
 
     //Loop through while user still has guesses leftover
     while (numGuess > 0 && userGuess != randomWord)
@@ -155,7 +166,7 @@ void birdHouse::birdHouseGame()
             //Conditional statement for if userGuess is the same as random word
             if (userGuess == randomWord)
             {
-                cout << "Congrats you guessed the word: " << randomWord << endl;
+                cout << "Wow!!! You guessed the word! Congratulations." <<endl;
                 return;
             }
 
