@@ -13,23 +13,11 @@ using namespace std;
 
 birdHouse::birdHouse(std::string filename)
 {
-    //Initalise variables
-    numGuess = 8;
-
-    //Initalise variable to keep track of number of wrong user guesses
-    wrongGuess = 0;
-
-    //Initalise ynInput
-    ynInput = false;
-
-    //Initalise uInput
-    uInput = '\0';
-
     //Create string for filepath
-    filepathStr = "./";
+    string filepathStr = "./";
 
     //Concatenate filepath + filename
-    namepathStr = filepathStr + filename;
+    string namepathStr = filepathStr + filename;
 
     //Output filepath + filename for confirmation
     cout << "Confirming you will be reading the following file: " << namepathStr << endl;
@@ -76,6 +64,18 @@ birdHouse::birdHouse(std::string filename)
 
     //Close the file
     birdfile.close();
+
+    //Initalise variables
+    numGuess = 8;
+
+    //Initalise variable to keep track of number of wrong user guesses
+    wrongGuess = 0;
+
+    //Initalise ynInput
+    ynInput = false;
+
+    //Initalise uInput
+    uInput = '\0';
 
     //Initialise randomWord variable
     randomWord = wordGenerator();
@@ -191,18 +191,17 @@ void birdHouse::wordGuess()
         else
         {
             cout << "Oh no. Your guess was not a match. You lose. "<< endl;
-            cout << "GAME OVER" << endl;
             cout << "        |    " << endl;
             cout << "        |    " << endl;
             cout << R"(       / \   )" << endl;
             cout << R"(      /   \)" << endl;
             cout << R"(     /     \)" << endl;
             cout << R"(    /       \)" << endl;
-            cout << "     ----------- " << endl;
-            cout << "     <         > " << endl;
-            cout << "     <    0    > " << endl;
-            cout << "      --------- " << endl;
-            cout << "      GAME OVER :(  " << endl;
+            cout << "   ----------- " << endl;
+            cout << "   <         > " << endl;
+            cout << "   <    0    > " << endl;
+            cout << "    --------- " << endl;
+            cout << "    GAME OVER :(   " << endl;
            exit(0);
         }
     }

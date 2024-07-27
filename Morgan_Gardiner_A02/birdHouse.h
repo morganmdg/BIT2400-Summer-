@@ -21,11 +21,7 @@ public:
     bool ynInput; //User input 0 or 1
     bool found; //Letter found in word T/F
     std::string guessInput; //full word guess
-    int randwordLength;
-    std::string inputStr;
-    std:: string extensionStr;
-    std::string filepathStr;
-    std::string namepathStr;
+    int randwordLength;  //Length of random word
 private:
     std::string* wordList; //list of words read from the file
     std::string randomWord; //A random word from the list
