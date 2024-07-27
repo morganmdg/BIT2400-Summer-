@@ -194,15 +194,15 @@ void birdHouse::wordGuess()
             cout << "GAME OVER" << endl;
             cout << "        |    " << endl;
             cout << "        |    " << endl;
-            cout << R"(     / \   )" << endl;
-            cout << R"(    /   \)" << endl;
-            cout << R"(   /     \)" << endl;
-            cout << R"(  /       \)" << endl;
-            cout << "   ----------- " << endl;
-            cout << "  <           > " << endl;
-            cout << "  <     0     > " << endl;
-            cout << "   ---------- " << endl;
-            cout << "   GAME OVER :(   " << endl;
+            cout << R"(       / \   )" << endl;
+            cout << R"(      /   \)" << endl;
+            cout << R"(     /     \)" << endl;
+            cout << R"(    /       \)" << endl;
+            cout << "     ----------- " << endl;
+            cout << "     <         > " << endl;
+            cout << "     <    0    > " << endl;
+            cout << "      --------- " << endl;
+            cout << "      GAME OVER :(  " << endl;
            exit(0);
         }
     }
@@ -227,27 +227,27 @@ int birdHouse::printbirdHouse()
     case 3:
         cout << "        |    " << endl;
         cout << "        |    " << endl;
-        cout << R"(     / \   )" << endl;
-        cout << R"(    /   \)" << endl;
-        cout << R"(   /     \)" << endl;
-        cout << R"(  /       \)" << endl;
+        cout << R"(       / \   )" << endl;
+        cout << R"(      /   \)" << endl;
+        cout << R"(     /     \)" << endl;
+        cout << R"(    /       \)" << endl;
         break;
     case 4:
         cout << "        |    " << endl;
         cout << "        |    " << endl;
-        cout << R"(     / \   )" << endl;
-        cout << R"(    /   \ )" << endl;
-        cout << R"(   /     \ )" << endl;
-        cout << R"(  /       \ )" << endl;
+        cout << R"(       / \   )" << endl;
+        cout << R"(      /   \)" << endl;
+        cout << R"(     /     \)" << endl;
+        cout << R"(    /       \)" << endl;
         cout << "   ----------- " << endl;
         break;
     case 5:
         cout << "        |    " << endl;
         cout << "        |    " << endl;
-        cout << R"(     / \   )" << endl;
-        cout << R"(    /   \)" << endl;
-        cout << R"(   /     \)" << endl;
-        cout << R"(  /       \)" << endl;
+        cout << R"(       / \   )" << endl;
+        cout << R"(      /   \)" << endl;
+        cout << R"(     /     \)" << endl;
+        cout << R"(    /       \)" << endl;
         cout << "   ----------- " << endl;
         cout << "  <    " << endl;
         cout << "  <     " << endl;
@@ -255,10 +255,10 @@ int birdHouse::printbirdHouse()
     case 6:
         cout << "        |    " << endl;
         cout << "        |    " << endl;
-        cout << R"(     / \   )" << endl;
-        cout << R"(    /   \)" << endl;
-        cout << R"(   /     \)" << endl;
-        cout << R"(  /       \)" << endl;
+        cout << R"(       / \   )" << endl;
+        cout << R"(      /   \)" << endl;
+        cout << R"(     /     \)" << endl;
+        cout << R"(    /       \)" << endl;
         cout << "   ----------- " << endl;
         cout << "   <         > " << endl;
         cout << "   <         > " << endl;
@@ -266,10 +266,10 @@ int birdHouse::printbirdHouse()
     case 7:
         cout << "        |    " << endl;
         cout << "        |    " << endl;
-        cout << R"(     / \   )" << endl;
-        cout << R"(    /   \)" << endl;
-        cout << R"(   /     \)" << endl;
-        cout << R"(  /       \)" << endl;
+        cout << R"(       / \   )" << endl;
+        cout << R"(      /   \)" << endl;
+        cout << R"(     /     \)" << endl;
+        cout << R"(    /       \)" << endl;
         cout << "   ----------- " << endl;
         cout << "   <         > " << endl;
         cout << "   <    0    > " << endl;
@@ -277,15 +277,15 @@ int birdHouse::printbirdHouse()
     case 8:
         cout << "        |    " << endl;
         cout << "        |    " << endl;
-        cout << R"(     / \   )" << endl;
-        cout << R"(    /   \)" << endl;
-        cout << R"(   /     \)" << endl;
-        cout << R"(  /       \)" << endl;
+        cout << R"(       / \   )" << endl;
+        cout << R"(      /   \)" << endl;
+        cout << R"(     /     \)" << endl;
+        cout << R"(    /       \)" << endl;
         cout << "   ----------- " << endl;
         cout << "   <         > " << endl;
         cout << "   <    0    > " << endl;
         cout << "    --------- " << endl;
-        cout << "    GAME OVER   " << endl;
+        cout << "    GAME OVER :(   " << endl;
         break;
     default:
         cout << "Error " << endl;

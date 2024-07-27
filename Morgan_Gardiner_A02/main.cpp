@@ -26,7 +26,7 @@ int main()
 
     //Test: Comment out after
     string randomWord = startbirdHouse.wordGenerator();
-    cout << "Your random word is: " << randomWord << endl;
+    //cout << "Your random word is: " << randomWord << endl;
 
     //Print out birdhouse game instructions
     startbirdHouse.birdHouseInstructions();
