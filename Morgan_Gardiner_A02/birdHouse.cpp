@@ -13,11 +13,23 @@ using namespace std;
 
 birdHouse::birdHouse(std::string filename)
 {
+    //Initalise variables
+    numGuess = 8;
+
+    //Initalise variable to keep track of number of wrong user guesses
+    wrongGuess = 0;
+
+    //Initalise ynInput
+    ynInput = false;
+
+    //Initalise uInput
+    uInput = '\0';
+
     //Create string for filepath
-    string filepathStr = "./";
+    filepathStr = "./";
 
     //Concatenate filepath + filename
-    string namepathStr = filepathStr + filename;
+    namepathStr = filepathStr + filename;
 
     //Output filepath + filename for confirmation
     cout << "Confirming you will be reading the following file: " << namepathStr << endl;
@@ -52,7 +64,7 @@ birdHouse::birdHouse(std::string filename)
     wordList = new string[NumWords];
 
     //Copy words from the temporary string array readWords into wordList array
-    copy(readWords,readWords+NumWords, wordList);
+    copy(readWords,readWords + NumWords, wordList);
 
     /*Test if copying to wordlist worked
     for(i=0; i<numWords; i++)
@@ -67,6 +79,10 @@ birdHouse::birdHouse(std::string filename)
 
     //Initialise randomWord variable
     randomWord = wordGenerator();
+
+    //Random length test
+    randwordLength = lengthGenerator(randomWord);
+
 }
 
 void birdHouse::birdHouseInstructions()
@@ -86,35 +102,25 @@ string birdHouse::wordGenerator()
     return wordList[i];
 }
 
-int birdHouse::lengthGenerator(string randomWord)
+int birdHouse::lengthGenerator(const string& randomWord)
 {
-    //Determine word length and set variable
-    int wordLength = randomWord.length();
+    wordLength = randomWord.length();
     return wordLength;
 }
 
 void birdHouse::birdHouseGame()
 {
-    //Random length test
-    int randwordLength = lengthGenerator(randomWord);
     cout << "The length of your random word is: " << randwordLength <<endl;
 
     //Initalize userGuess to '-' and depending on length of random word
     string userGuess (randwordLength, '-');
     cout << userGuess << endl;
 
-    //Initalise variable to keep track of remaining user guesses
-    numGuess = 8;
-
-    //Initalise variable to keep track of number of wrong user guesses
-    wrongGuess = 0;
-
     //Loop through while user still has guesses leftover
     while (numGuess > 0 && userGuess != randomWord)
     {
         //Prompt user input
         cout << "Enter a letter below: " << endl;
-        uInput;
         cin >> uInput;
 
         //Boolean operator for if letter is found
@@ -129,11 +135,6 @@ void birdHouse::birdHouseGame()
             }
         }
 
-        cout << "After Guess: " << uInput << endl;
-        cout << "User Guess " << userGuess << endl;
-        cout << "random word " << randomWord << endl;
-        cout << "found: " << found << endl;
-
             if (found == true) {
                 cout << userGuess << endl;
                 cout << "Yay! You guessed a letter correctly" << endl;;
@@ -145,7 +146,7 @@ void birdHouse::birdHouseGame()
                 numGuess --;
                 wrongGuess++;
                 //Call method to print portion of bird house
-                printbirdHouse(wrongGuess);
+                printbirdHouse();
             }
 
             //Call word guess method to see if user would like to take a chance to guess full word
@@ -161,26 +162,24 @@ void birdHouse::birdHouseGame()
             //Conditional statement for if user runs out of guesses
             if (numGuess == 0)
             {
-                cout << "Oh no!! You're out of guesses :(" << endl;
-                cout << "You lose" << endl;
+                cout << "Oh no!! You're out of guesses" << endl;
+                cout << "The random word was: " << randomWord << endl;
+                cout << "YOU LOSE :(" << endl;
                return;
             }
         }
 
     }
 
-
 void birdHouse::wordGuess()
 {
     //Ask user after each guess if they would like to guess the whole word
     cout << "Would you like to try guessing the word? 1 = YES, 0 = NO " <<endl;
-    bool ynInput;
     cin >> ynInput;
 
     if (ynInput == 1)
     {
         cout << "Take a chance and guess the full word below: "<< endl;
-        string guessInput;
         cin >> guessInput;
 
         if (guessInput == randomWord)
@@ -209,7 +208,7 @@ void birdHouse::wordGuess()
     }
 }
 
-int birdHouse::printbirdHouse(int iwrongGuess)
+int birdHouse::printbirdHouse()
 {
 //Print out part of birdhouse each wrong guess
     switch(wrongGuess)
@@ -219,9 +218,11 @@ int birdHouse::printbirdHouse(int iwrongGuess)
         cout << " | " << endl;
         break;
     case 2:
-        cout << R"( \ )" << endl;
+        cout << " | " << endl;
+        cout << " | " << endl;
         cout << R"(  \ )" << endl;
         cout << R"(   \ )" << endl;
+        cout << R"(    \ )" << endl;
         break;
     case 3:
         cout << "        |    " << endl;
@@ -235,9 +236,9 @@ int birdHouse::printbirdHouse(int iwrongGuess)
         cout << "        |    " << endl;
         cout << "        |    " << endl;
         cout << R"(     / \   )" << endl;
-        cout << R"(    /   \)" << endl;
-        cout << R"(   /     \)" << endl;
-        cout << R"(  /       \)" << endl;
+        cout << R"(    /   \ )" << endl;
+        cout << R"(   /     \ )" << endl;
+        cout << R"(  /       \ )" << endl;
         cout << "   ----------- " << endl;
         break;
     case 5:
@@ -259,8 +260,8 @@ int birdHouse::printbirdHouse(int iwrongGuess)
         cout << R"(   /     \)" << endl;
         cout << R"(  /       \)" << endl;
         cout << "   ----------- " << endl;
-        cout << "  <           > " << endl;
-        cout << "  <           > " << endl;
+        cout << "   <         > " << endl;
+        cout << "   <         > " << endl;
         break;
     case 7:
         cout << "        |    " << endl;
@@ -270,8 +271,8 @@ int birdHouse::printbirdHouse(int iwrongGuess)
         cout << R"(   /     \)" << endl;
         cout << R"(  /       \)" << endl;
         cout << "   ----------- " << endl;
-        cout << "  <           > " << endl;
-        cout << "  <     0     > " << endl;
+        cout << "   <         > " << endl;
+        cout << "   <    0    > " << endl;
         break;
     case 8:
         cout << "        |    " << endl;
@@ -281,10 +282,13 @@ int birdHouse::printbirdHouse(int iwrongGuess)
         cout << R"(   /     \)" << endl;
         cout << R"(  /       \)" << endl;
         cout << "   ----------- " << endl;
-        cout << "  <           > " << endl;
-        cout << "  <     0     > " << endl;
-        cout << "   ---------- " << endl;
+        cout << "   <         > " << endl;
+        cout << "   <    0    > " << endl;
+        cout << "    --------- " << endl;
         cout << "    GAME OVER   " << endl;
+        break;
+    default:
+        cout << "Error " << endl;
         break;
     }
     return 0;

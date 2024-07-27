@@ -9,17 +9,23 @@
 
 class birdHouse {
 public:
-    birdHouse (std::string Filename); //Constructor should open the file and set the wordList
+    explicit birdHouse (std::string Filename); //Constructor should open the file and set the wordList
     ~birdHouse(); //Destructor
-    void birdHouseInstructions(); //Bird House Hangman Game Instructions
+    static void birdHouseInstructions(); //Bird House Hangman Game Instructions
     std::string wordGenerator(); //Method to generate random word from file
-    int lengthGenerator(std::string randomWord); //Method to generate length of random word
+    int lengthGenerator(const std::string& randomWord); //Method to generate length of random word
     void birdHouseGame(); //Function to start the Bird House game
     void wordGuess(); //Function to prompt user to guess full random word
-    int printbirdHouse(int wrongGuess); //Method to print out parts of Bird House for each wrong answer
+    int printbirdHouse(); //Method to print out parts of Bird House for each wrong answer
     std::string userGuess; //String to store the user guesses Initalize to dashes
-    bool ynInput; //User input
-    bool found;
+    bool ynInput; //User input 0 or 1
+    bool found; //Letter found in word T/F
+    std::string guessInput; //full word guess
+    int randwordLength;
+    std::string inputStr;
+    std:: string extensionStr;
+    std::string filepathStr;
+    std::string namepathStr;
 private:
     std::string* wordList; //list of words read from the file
     std::string randomWord; //A random word from the list
