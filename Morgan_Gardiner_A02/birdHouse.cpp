@@ -97,8 +97,9 @@ void birdHouse::birdHouseInstructions()
     cout << "Each turn you have a chance to guess a letter from that word." << endl;
     cout << "Each incorrect guess will generate a part of the bird house. You have 8 chances." << endl;
     cout << "Once the full bird house appears, you lose." << endl;
-    cout << "Each turn you will also have a chance to try and guess the full word." << endl;
-    cout << "If you guess the right word you win. If you get all of the letters of the random word you win." << endl;
+    cout << "Each turn you will have a chance to try and guess the full word." << endl;
+    cout << "If you guess the right word you win. If you guess wrong it's game over." << endl;
+    cout << "If you guess all of the letters of the random word throughout your turns, you win." << endl;
     cout << "GOOD LUCK!" << endl;
     cout << "********************************" << endl;
 }
@@ -167,6 +168,10 @@ void birdHouse::birdHouseGame()
             if (userGuess == randomWord)
             {
                 cout << "Wow!!! You guessed the word! Congratulations." <<endl;
+                cout << "     ^      ^   " << endl;
+                cout << "         *       " << endl;
+                cout << R"(      \_____/   )" << endl;
+                cout << R"(   YOU WIN !!! )" << endl;
                 return;
             }
 
@@ -196,7 +201,10 @@ void birdHouse::wordGuess()
         if (guessInput == randomWord)
         {
             cout << "Wow!!! You guessed the word! Congratulations." <<endl;
-            cout << "YOU WIN :)" << endl;
+            cout << "     ^      ^   " << endl;
+            cout << "         *       " << endl;
+            cout << R"(      \_____/   )" << endl;
+            cout << R"(   YOU WIN !!! )" << endl;
             exit(0);
         }
         else
