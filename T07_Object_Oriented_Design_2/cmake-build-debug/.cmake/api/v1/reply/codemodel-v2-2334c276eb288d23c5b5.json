@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "T07_Object_Oriented_Design_2",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "T07_Object_Oriented_Design_2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-T07_Object_Oriented_Design_2-Debug-01409c2a88f0f5469f37.json",
+					"name" : "T07_Object_Oriented_Design_2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/morga/OneDrive/Documents/BIT2400-Summer-/T07_Object_Oriented_Design_2/cmake-build-debug",
+		"source" : "C:/Users/morga/OneDrive/Documents/BIT2400-Summer-/T07_Object_Oriented_Design_2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
