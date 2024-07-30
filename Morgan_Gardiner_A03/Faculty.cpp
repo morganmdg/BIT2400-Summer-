@@ -15,6 +15,12 @@ Faculty::Faculty()
     FacultyType = false;
 }
 
+float Faculty::salary()
+{
+    float salary = 0.0f;
+    return salary;
+}
+
 //Class destructor to reset values
 Faculty::~Faculty()
 {
