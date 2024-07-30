@@ -61,6 +61,12 @@ build CMakeFiles/T07_Object_Oriented_Design_2.dir/Ticket.cpp.obj: CXX_COMPILER__
   OBJECT_DIR = CMakeFiles\T07_Object_Oriented_Design_2.dir
   OBJECT_FILE_DIR = CMakeFiles\T07_Object_Oriented_Design_2.dir
 
+build CMakeFiles/T07_Object_Oriented_Design_2.dir/TicketSystem.cpp.obj: CXX_COMPILER__T07_Object_Oriented_Design_2_unscanned_Debug C$:/Users/morga/OneDrive/Documents/BIT2400-Summer-/T07_Object_Oriented_Design_2/TicketSystem.cpp || cmake_object_order_depends_target_T07_Object_Oriented_Design_2
+  DEP_FILE = CMakeFiles\T07_Object_Oriented_Design_2.dir\TicketSystem.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\T07_Object_Oriented_Design_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\T07_Object_Oriented_Design_2.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target T07_Object_Oriented_Design_2
@@ -69,7 +75,7 @@ build CMakeFiles/T07_Object_Oriented_Design_2.dir/Ticket.cpp.obj: CXX_COMPILER__
 #############################################
 # Link the executable T07_Object_Oriented_Design_2.exe
 
-build T07_Object_Oriented_Design_2.exe: CXX_EXECUTABLE_LINKER__T07_Object_Oriented_Design_2_Debug CMakeFiles/T07_Object_Oriented_Design_2.dir/main.cpp.obj CMakeFiles/T07_Object_Oriented_Design_2.dir/Ticket.cpp.obj
+build T07_Object_Oriented_Design_2.exe: CXX_EXECUTABLE_LINKER__T07_Object_Oriented_Design_2_Debug CMakeFiles/T07_Object_Oriented_Design_2.dir/main.cpp.obj CMakeFiles/T07_Object_Oriented_Design_2.dir/Ticket.cpp.obj CMakeFiles/T07_Object_Oriented_Design_2.dir/TicketSystem.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\T07_Object_Oriented_Design_2.dir

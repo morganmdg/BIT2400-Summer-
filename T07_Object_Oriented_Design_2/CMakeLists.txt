@@ -7,4 +7,5 @@ add_executable(T07_Object_Oriented_Design_2 main.cpp
         Ticket.h
         Ticket.cpp
         TicketSystem.h
-        TicketSystem.h)
+        TicketSystem.h
+        TicketSystem.cpp)
