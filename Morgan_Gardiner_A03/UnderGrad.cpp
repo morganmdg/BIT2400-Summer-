@@ -7,6 +7,14 @@
 
 using namespace std;
 
+//Default constructor to initalize class member variables
+UnderGrad::UnderGrad()
+{
+    NumCourses = 0;
+    yearStanding = 0;
+    classOf = 0;
+}
+
 string UnderGrad::calcGPA()
 {
     string letterGrade;
@@ -65,4 +73,12 @@ string UnderGrad::calcGPA()
         letterGrade = "F";
     }
     return letterGrade;
+}
+
+//Default Destructor to reset values to 0
+UnderGrad::~UnderGrad()
+{
+    NumCourses = 0;
+    yearStanding = 0;
+    classOf = 0;
 }
