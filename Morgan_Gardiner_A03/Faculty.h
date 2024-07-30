@@ -13,7 +13,7 @@ public:
     ~Faculty();
     void printInfo();
     void userInput();
-
+    virtual float salary();
 protected:
     std::string DepName;
     bool FacultyType;

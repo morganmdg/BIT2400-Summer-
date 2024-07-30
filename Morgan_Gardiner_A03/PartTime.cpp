@@ -3,3 +3,12 @@
 //
 
 #include "PartTime.h"
+#include <string>
+
+using namespace std;
+
+float PartTime::salary()
+{
+    float salary = hoursWorked * hourlyRate;
+    return salary;
+}

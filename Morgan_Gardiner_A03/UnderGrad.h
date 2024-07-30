@@ -1,15 +1,17 @@
 //
 // Created by morga on 2024-07-30.
 //
-#include "Student.h"
-#include <string>
+
 #ifndef UNDERGRAD_H
 #define UNDERGRAD_H
 
-class UnderGrad {
+#include "Student.h"
+#include <string>
+
+class UnderGrad : public Student {
 public:
-    void printInfo();
-    void userInput();
+    void printInfo() final;
+    void userInput() final;
     std::string calcGPA();
 protected:
     std::string ProgramName;
