@@ -7,6 +7,8 @@
 
 class FullTime : public Faculty {
 public:
+    FullTime(); //Default Constructor
+    ~FullTime(); //Default Destructor
     void printInfo() final;
     void userInput() final;
     float salary() final;

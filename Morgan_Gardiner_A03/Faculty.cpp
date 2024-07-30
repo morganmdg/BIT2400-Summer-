@@ -15,9 +15,9 @@ Faculty::Faculty()
     FacultyType = false;
 }
 
-
-//Class destructor
+//Class destructor to reset values
 Faculty::~Faculty()
 {
-
+    DepName = " ";
+    FacultyType = false;
 }
