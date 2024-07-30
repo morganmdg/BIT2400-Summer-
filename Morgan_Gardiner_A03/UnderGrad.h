@@ -10,6 +10,8 @@
 
 class UnderGrad : public Student {
 public:
+    UnderGrad(); //Default Constructor
+    ~UnderGrad(); //Default Destructor
     void printInfo() final;
     void userInput() final;
     std::string calcGPA();
