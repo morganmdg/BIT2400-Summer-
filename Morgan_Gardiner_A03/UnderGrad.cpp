@@ -3,3 +3,11 @@
 //
 
 #include "UnderGrad.h"
+#include <string>
+
+using namespace std;
+
+string UnderGrad::calcGPA()
+{
+
+}

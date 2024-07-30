@@ -8,8 +8,8 @@
 
 class Graduate : public Student {
 public:
-    void printInfo();
-    void userInput();
+    void printInfo() final;
+    void userInput() final;
     std::string calcGPA();
     bool TAType();
 protected:
