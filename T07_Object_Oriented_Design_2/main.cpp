@@ -37,5 +37,4 @@ int main()
     ts.printTickets("Owen G");
 
     ts.getTicket(5)->printDetails();
-
 }

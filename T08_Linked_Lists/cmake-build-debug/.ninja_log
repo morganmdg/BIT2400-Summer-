@@ -1,0 +1,7 @@
+# ninja log v6
+51	445	7440126563823635	CMakeFiles/T08_Linked_Lists.dir/Node.cpp.obj	894ffb1cf7973c6a
+447	733	7440126567888224	CMakeFiles/T08_Linked_Lists.dir/Queue.cpp.obj	aac6dcc0eb34dd8a
+733	1052	7440126570649649	CMakeFiles/T08_Linked_Lists.dir/Stack.cpp.obj	fde967e0ab489d5b
+9	1336	7440126563405612	CMakeFiles/T08_Linked_Lists.dir/main.cpp.obj	ef5ed665365faace
+87	1376	7440126564182667	CMakeFiles/T08_Linked_Lists.dir/List.cpp.obj	72fd996192f14bb6
+1376	1948	7440126577069293	T08_Linked_Lists.exe	b8c6c8cae97cd94b
