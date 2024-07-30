@@ -7,9 +7,9 @@
 
 class FullTime : public Faculty {
 public:
-    void printInfo();
-    void userInput();
-    void salary();
+    void printInfo() final;
+    void userInput() final;
+    float salary() final;
 protected:
     int officeExtend;
     float BaseSalary;
