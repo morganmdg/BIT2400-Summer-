@@ -9,8 +9,11 @@
 
 class Faculty : public Person {
 public:
+    Faculty();
+    ~Faculty();
     void printInfo();
     void userInput();
+
 protected:
     std::string DepName;
     bool FacultyType;

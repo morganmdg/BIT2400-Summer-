@@ -3,3 +3,21 @@
 //
 
 #include "Faculty.h"
+#include <string>
+
+using namespace std;
+
+//Default constructor to initalize class member variables
+Faculty::Faculty()
+{
+    DepName = " ";
+    //True = part time faculty, False = full time faculty
+    FacultyType = false;
+}
+
+
+//Class destructor
+Faculty::~Faculty()
+{
+
+}
