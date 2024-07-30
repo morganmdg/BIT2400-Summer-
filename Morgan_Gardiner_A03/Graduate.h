@@ -8,6 +8,8 @@
 
 class Graduate : public Student {
 public:
+    Graduate(); //Default Constructor
+    ~Graduate(); //Default Destructor
     void printInfo() final;
     void userInput() final;
     std::string calcGPA();

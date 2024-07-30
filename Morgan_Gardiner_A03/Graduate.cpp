@@ -7,6 +7,14 @@
 
 using namespace std;
 
+//Default constructor to initalize class member variables
+Graduate::Graduate()
+{
+    supervisorName = " ";
+    numPublications = 0;
+    TA = false;
+    hoursAssigned = 0;
+}
 //TAType method returns if TA is Full or Half TA based on hours assigned
 bool Graduate::TAType()
 {
@@ -64,4 +72,13 @@ string Graduate::calcGPA()
         letterGrade = "F";
     }
     return letterGrade;
+}
+
+//Default Destructor to reset values to 0
+Graduate::~Graduate()
+{
+    supervisorName = " ";
+    numPublications = 0;
+    TA = false;
+    hoursAssigned = 0;
 }
