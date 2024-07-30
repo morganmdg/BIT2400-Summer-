@@ -8,6 +8,8 @@
 
 class PartTime : public Faculty {
 public:
+    PartTime(); //Default Constructor
+    ~PartTime(); //Default Destructor
     void printInfo() final;
     void userInput() final;
     float salary() final;
