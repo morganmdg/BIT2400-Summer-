@@ -8,7 +8,8 @@
 
 
 class Faculty {
-
+protected:
+    
 };
 
 
