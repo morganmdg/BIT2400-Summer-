@@ -10,6 +10,7 @@ using namespace std;
 //Default constructor to initalize class member variables
 UnderGrad::UnderGrad()
 {
+    ProgramName = " ";
     NumCourses = 0;
     yearStanding = 0;
     classOf = 0;
@@ -78,6 +79,7 @@ string UnderGrad::calcGPA()
 //Default Destructor to reset values to 0
 UnderGrad::~UnderGrad()
 {
+    ProgramName = " ";
     NumCourses = 0;
     yearStanding = 0;
     classOf = 0;
